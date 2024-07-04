@@ -1,0 +1,56 @@
+.expandingCards_container {
+    width: 200px;
+    height: 200px;
+    perspective: 500px;
+    margin: 100px;
+  }
+  
+  .expandingCards_cube {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform: rotate3d(1, 1, 0, 45deg);
+    /* transform: rotateX(24deg) rotateY(30deg) rotateZ(-10deg); */
+    transition: all 0.5s linear;
+
+  }
+  
+  .expandingCards_face {
+    width: 200px;
+    height: 200px;
+    background: rgb(55, 13, 118);
+    border: 2px solid rgb(117, 25, 255);
+    position: absolute;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+  }
+
+
+  .expandingCards_front {
+    /* transform: translateZ(100px); */
+    transition: all 0.5s linear;
+  }
+  
+  .expandingCards_container:hover .expandingCards_front {
+    transform: translateZ(100px);
+  }
+
+  .expandingCards_container:hover .expandingCards_back {
+    transform: translateZ(-100px) rotateY(0deg);
+    /* transform: translateZ(-100px) rotateY(180deg); */
+  }
+/* 
+  .container:hover .cube {
+    transform: rotateX(10deg) rotateY(-30deg) rotateZ(10deg);
+  } */
+
+  .expandingCards_back {
+    transform: rotateY(0deg);
+    /* transform: rotateY(180deg); */
+    transition: all 0.5s linear;
+  }

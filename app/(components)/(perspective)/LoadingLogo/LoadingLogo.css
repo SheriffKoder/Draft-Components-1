@@ -1,0 +1,75 @@
+@keyframes turn {
+    from { transform: rotate3d(0, 0, 0, 0); }
+    to { transform: rotate3d(0, 1, 0, 360deg); }
+  }
+  
+  .LoadingLogo_container {
+    width: 50px;
+    height: 50px;
+    perspective: 125px;
+  
+    /* center */
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+  
+  }
+  
+  .LoadingLogo_cube {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    transform-style: preserve-3d;
+    animation: turn 5s linear infinite;
+  
+  }
+  
+  .LoadingLogo_face {
+    width: 50px;
+    height: 50px;
+    /* background: skyblue; */
+    /* border: 2px solid black; */
+    position: absolute;
+    /* opacity: 0.5; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    transition: transform 500ms;
+    backface-visibility: hidden;
+  
+  }
+  
+  .LoadingLogo_front {
+    transform: translateZ(0px);
+  }
+  
+  .LoadingLogo_back {
+    transform: translateZ(0px) rotateY(180deg);
+  }
+  
+  .LoadingLogo_left {
+    transform: translateX(-50px) rotateY(-90deg);
+    display: none;
+  }
+  
+  .LoadingLogo_right {
+    transform: translateX(50px) rotateY(90deg);
+    display: none;
+  
+  }
+  
+  .LoadingLogo_top {
+    transform: translateY(-50px) rotateX(90deg);
+    display: none;
+  
+  }
+  
+  .LoadingLogo_bottom {
+    transform: translateY(50px) rotateX(-90deg);
+    display: none;
+  
+  }
+  
