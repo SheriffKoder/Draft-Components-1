@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {components} from "@/constants/HomeComponents";
+import {componentsCSSPerspective, componentsUI,components3D, componentsElements} from "@/constants/HomeComponents";
 import HomeCardLink from "@/components/home/HomeCardLink";
 import mainLogo from "@/public/mainLogo.png"
 
@@ -44,11 +44,27 @@ export default function Home() {
         />
       </div>
 
-        <div className="grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left gap-4">
-          {components.map((component) => (
+        <div className="grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left gap-4 px-5">
+
+          <h1 className="col-span-full text-2xl font-bold">3D Elements</h1>
+          {components3D.map((component) => (
             <HomeCardLink key={component.title} cmp={component} />
           ))}
 
+          <h1 className="col-span-full text-2xl font-bold mt-20">CSS Perspective</h1>
+          {componentsCSSPerspective.map((component) => (
+            <HomeCardLink key={component.title} cmp={component} />
+          ))}
+
+          <h1 className="col-span-full text-2xl font-bold mt-20">Layout & UI</h1>
+          {componentsUI.map((component) => (
+            <HomeCardLink key={component.title} cmp={component} />
+          ))}
+
+          <h1 className="col-span-full text-2xl font-bold mt-20">Elements</h1>
+          {componentsElements.map((component) => (
+            <HomeCardLink key={component.title} cmp={component} />
+          ))}
           
         </div>
     </main>

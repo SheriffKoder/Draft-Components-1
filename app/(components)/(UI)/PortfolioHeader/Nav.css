@@ -1,0 +1,38 @@
+/* animation for the bar at the top of the wesbite's navigation menu */
+.gradient_nav_animation {
+    animation: navAnimation 20s ease infinite;
+    background-size: 200% 200%;
+    /* background: linear-gradient(130deg, #ff7e00, #ffffff, #5cff00); */
+  
+  
+  }
+  
+  @keyframes navAnimation { 
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+  }
+
+
+
+.gradient_text_hover_1:hover, .gradient_text_hover_1:focus {
+  background: -webkit-linear-gradient(
+    
+  55deg, 
+  
+  rgba(83,152,191,255)
+  
+  20%, 
+  
+  rgba(57,208,183,255)
+
+  100%
+  );  
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradientRoundButton {
+    @apply rounded-[1rem]  bg-gradient-to-r from-[#387ca4] to-[#39d0b7b4]
+  }
