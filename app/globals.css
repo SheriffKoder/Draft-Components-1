@@ -41,3 +41,22 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+
+
+/* some tailwind styling for buttons across the page */
+.gradientBGButton {
+  @apply bg-gradient-to-r from-[#387ca4] to-[#39d0b7b4]
+}
+
+
+.ambientBackground {
+  @apply bg-[rgb(2,8,18)]
+}
+.gradientRoundButton {
+  @apply rounded-[1rem]  bg-gradient-to-r from-[#387ca4] to-[#39d0b7b4]
+}
+
+
+.gradientGreyButton {
+  @apply bg-[#4747475c] rounded-[1rem]
+}

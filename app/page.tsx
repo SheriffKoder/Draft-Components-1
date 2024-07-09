@@ -44,7 +44,7 @@ export default function Home() {
         />
       </div>
 
-        <div className="grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left gap-4 px-5">
+        <div className="grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-3 lg:text-left gap-4 px-5">
 
           <h1 className="col-span-full text-2xl font-bold">3D Elements</h1>
           {components3D.map((component) => (

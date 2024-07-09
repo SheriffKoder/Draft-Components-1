@@ -1,0 +1,72 @@
+
+.circularProgress_skill {
+    width: 170px;
+    height: 170px;
+    position: relative;
+    
+
+}
+
+.circularProgress_outer {
+    height: 146px;
+    width: 146px;
+    border: 6px solid rgba(255, 255, 255, 0.086);
+    border-radius: 50%;
+    /* background-color: red; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15);
+
+}
+
+.circularProgress_inner {
+    height: 141px;
+    width: 141px;
+    /* border: 1px solid orangered; */
+    border-radius: 50%;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.15);
+
+}
+
+#circularProgress_number {
+    font-weight: 600;
+    font-size: 30px;
+    /* margin-left: 0.5rem; */
+}
+
+#circularProgress_circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 7px;
+}
+
+#circularProgress_svg {
+    border-radius: 99px;
+    position: absolute;
+    top: 0px;
+    left: -1.5px;
+    /* transform: rotateZ(130deg); */
+
+    /* progress fill, relative to the dasharray value, 450 will be 0% */
+    /* stroke-dashoffset: 600; */
+
+    /* progress radius */
+    stroke-dasharray: 450;  
+    /* animation: anim 2s linear forwards; */
+}
+/* 450-450*0.65 */
+
+@keyframes anim {
+    100% {
+        stroke-dashoffset: 157.5;
+    }
+}

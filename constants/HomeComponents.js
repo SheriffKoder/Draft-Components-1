@@ -26,6 +26,16 @@ export const componentsUI = [
         title: "Header + Footer",
         description: "Reusable sticky header and footer",
     },
+    {
+        link: "/backgroundTransitionSwitch",
+        title: "Background color transition",
+        description: "Fluid background color transition",
+    },
+    {
+        link: "/gradientBackgroundSwitch",
+        title: "Gradient background color transition",
+        description: "Fluid gradient background color transition (framer motion)",
+    },
 ]
 
 export const components3D = [
@@ -46,5 +56,10 @@ export const componentsElements = [
         link: "/IncreasingNumbers",
         title: "Increasing numbers",
         description: "An animation for numbers to increase on view (framer-motion)",
+    },
+    {
+        link: "/circularProgress",
+        title: "Circular Progress",
+        description: "Circle progress bar animation, gradient color and displays a graphic on completion",
     },
 ]
