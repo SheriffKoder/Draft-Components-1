@@ -3,7 +3,7 @@
 // https://www.youtube.com/watch?app=desktop&v=H2HYccAGR00
 
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import "./circularProgress.css"
 
 import Lottie from "react-lottie";
@@ -17,6 +17,10 @@ const CircularProgress = () => {
     const [length, setLength] = useState<number>(112);
     const [busy, setBusy] = useState(false);
 
+    // allow to clear the timer interval and set a new one when clicking the buttons, make sure to use window.setInterval
+    const timerRef = useRef<number>(0);
+
+    // for the lottie animating icon
     const defaultOptions = {
         loop: false,
         autoplay: true,
@@ -26,7 +30,33 @@ const CircularProgress = () => {
         }
     };
 
-    const changeProgress = (num:number, e:React.MouseEvent<HTMLButtonElement>) => {
+    // scroll bar handler
+    const circularProgress_scrollTrack = (e:React.MouseEvent<HTMLDivElement>)=> {
+        
+        let currentTrack = e.pageX - e.currentTarget.offsetLeft;    // mouse position relevant to the div
+        clearInterval(timerRef.current);
+
+        // Number %
+        // relate the progress bar boundary (338) to this track start/end lengths
+        // 338 is 450 - 112, 450 is the value given by css and 112 was to shift the progress bar start (custom start position)
+        let x = (currentTrack/338)*100;
+        let currentProgress = (Math.round(x * 100) / 100).toFixed(0);
+        setProg(`${currentProgress}%`);
+
+        // Circular progress %
+        // relate to the progress bar boundary again
+        let progress = ((currentTrack/(338)*338)-338-100)*-1;
+        setLength((progress));
+
+
+        if (+currentProgress < 2 ) {
+            setLength(440);
+        }   
+    };
+
+
+    // buttons handler
+    const changeProgress = (num:number) => {
 
         // align the progress to be a little backwards on 
         // let factor = (((num-50+50)*((num/100)*(num/100)*(num/100)*(num/100))/2))+2;
@@ -51,12 +81,12 @@ const CircularProgress = () => {
             let i=length;   //current length
             let number = 0;
             setBusy(true);
-            const interval = setInterval(()=> {
+            timerRef.current = window.setInterval(()=> {
 
                 // gradual speed change depending on the current i/progress
                 let speedFactor = (125/i)*(300/i);
 
-                // decrementing
+                // Backward progress / decrementing
                 if (num < +prog.split("%")[0]) {
 
                     i=i+(2*speedFactor);
@@ -64,7 +94,7 @@ const CircularProgress = () => {
                     //   console.log(i);
         
                     if (i >= fill) {
-                        clearInterval(interval);
+                        clearInterval(timerRef.current);
                         setProg(`${num}%`)  // just a double check as final % number can increase a bit buggy
                         setBusy(false);
                     } else if (i === 112) {
@@ -75,7 +105,7 @@ const CircularProgress = () => {
                         setLength(i);   
                     }
 
-                // incrementing
+                // Forward progress / incrementing
                 } else {
 
                     i=i-(2*speedFactor);
@@ -83,7 +113,7 @@ const CircularProgress = () => {
                     //   console.log(i);
         
                     if (i <= fill) {
-                        clearInterval(interval);
+                        clearInterval(timerRef.current);
                         setProg(`${num}%`)
                         setBusy(false);
                     }
@@ -108,19 +138,22 @@ const CircularProgress = () => {
             <div className="circularProgress_outer">
                 <div className="circularProgress_inner">
                     <div id="circularProgress_number">
-                        {/* {prog} */}
                         
-                        {prog === "100%" ? (
+                        {prog === "100%" ? 
+                        (
                             <Lottie 
-                        options={defaultOptions}
-                        height={120}
-                        width={120}
-                        />
-                        ): prog}
+                            options={defaultOptions}
+                            height={120}
+                            width={120}
+                            />
+                        ): 
+                            prog
+                        }
                     </div>
                 </div>
             </div>
 
+            {/* takes length between 112(100%) and 450 (0%) */}
             <svg id="circularProgress_svg" 
             className="rotate-[130deg]" style={{strokeDashoffset: length  }}
             xmlns="http://www.w3.org/2000/svg" version="1.1" width="148px" height="148px">
@@ -133,30 +166,35 @@ const CircularProgress = () => {
                 <circle cx="72.5" cy="73.5" r="70" stroke-linecap="round"
                 id="circularProgress_circle" />
             </svg>
+        </div>
 
-            <div className='flex flex-row items-center justify-center gap-4 mt-12'>
-                {/* end at 96 */}
-                <button onClick={(e)=>changeProgress(100,e)} disabled={busy}
-                    className="px-4 py-1 rounded-xl bg-gradient-to-r from-[#387ca4] to-[#39d0b7b4]
-                    hover:from-[#245069] hover:to-[#258c7bb4]">
+        <div className='flex flex-row items-center justify-center gap-4 mt-8'>
+                <button onClick={(e)=>{clearInterval(timerRef.current); changeProgress(100); }}
+                    className="px-4 py-1 rounded-xl bg-[#2a9b9b] hover:bg-[#0e7272] transition-colors duration-500">
                     100%
                 </button>
-                <button onClick={(e)=>changeProgress(75,e)} disabled={busy}
-                    className="px-4 py-1 rounded-xl bg-gradient-to-r from-[#387ca4] to-[#39d0b7b4]
-                    hover:from-[#245069] hover:to-[#258c7bb4]">
+                <button onClick={(e)=>{clearInterval(timerRef.current); changeProgress(75); }}
+                    className="px-4 py-1 rounded-xl bg-[#2a9b9b] hover:bg-[#0e7272] transition-colors duration-500">
                     75%
                 </button>
-                <button onClick={(e)=>changeProgress(50,e)} disabled={busy}
-                    className= "px-4 py-1 rounded-xl bg-gradient-to-r from-[#387ca4] to-[#39d0b7b4] hover:from-[#245069] hover:to-[#258c7bb4]">
+                <button onClick={(e)=>{clearInterval(timerRef.current); changeProgress(50); }}
+                    className= "px-4 py-1 rounded-xl bg-[#2a9b9b] hover:bg-[#0e7272] transition-colors duration-500">
                     50%
                 </button>
-                <button onClick={(e)=>changeProgress(25,e)} disabled={busy}
-                    className="px-4 py-1 rounded-xl bg-gradient-to-r from-[#387ca4] to-[#39d0b7b4] hover:from-[#245069] hover:to-[#258c7bb4]">
+                <button onClick={(e)=>{clearInterval(timerRef.current); changeProgress(25); }}
+                    className="px-4 py-1 rounded-xl bg-[#2a9b9b] hover:bg-[#0e7272] transition-colors duration-500">
                     25%
                 </button>
-            </div>
+        </div>
 
+        <div className='flex flex-col gap-4 mt-8'>
+                <div onMouseMove={circularProgress_scrollTrack}  className={`w-[calc(450px-112px)] 
+                h-[20px] rounded-full bg-slate-500 overflow-hidden`}>
+                <div style={{width: `${prog}`, borderRadius: `${+prog.split("%")[0]/1.5}px`}}
+                className={`
+                h-full cursor-pointer bg-gradient-to-r from-[#387ca4] to-[#39d0b7b4]`}></div>
 
+                </div>
         </div>
 
     </section>
