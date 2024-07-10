@@ -45,7 +45,8 @@ const CircularProgress = () => {
 
         // Circular progress %
         // relate to the progress bar boundary again
-        let progress = ((currentTrack/(338)*338)-338-100)*-1;
+        // 5 is just for end position adjustment
+        let progress = ((currentTrack/(338)*338)-338-100-5)*-1;
         setLength((progress));
 
 
@@ -62,8 +63,8 @@ const CircularProgress = () => {
         // let factor = (((num-50+50)*((num/100)*(num/100)*(num/100)*(num/100))/2))+2;
         // num/100 >= 0.5 ? factor = 20*(num/100) : 0;
 
-        // cut like filled bar for un-complete shape with a rotation
-        let factor = (110*num/100);
+        // cut like filled bar for un-complete shape at 100%, with a rotation added in css to shift the start position
+        let factor = (90*num/100);
 
         let fill = (Math.floor(450-(450*(num/100))+factor));
 
@@ -169,22 +170,28 @@ const CircularProgress = () => {
         </div>
 
         <div className='flex flex-row items-center justify-center gap-4 mt-8'>
-                <button onClick={(e)=>{clearInterval(timerRef.current); changeProgress(100); }}
-                    className="px-4 py-1 rounded-xl bg-[#2a9b9b] hover:bg-[#0e7272] transition-colors duration-500">
-                    100%
-                </button>
-                <button onClick={(e)=>{clearInterval(timerRef.current); changeProgress(75); }}
-                    className="px-4 py-1 rounded-xl bg-[#2a9b9b] hover:bg-[#0e7272] transition-colors duration-500">
-                    75%
-                </button>
-                <button onClick={(e)=>{clearInterval(timerRef.current); changeProgress(50); }}
-                    className= "px-4 py-1 rounded-xl bg-[#2a9b9b] hover:bg-[#0e7272] transition-colors duration-500">
-                    50%
-                </button>
                 <button onClick={(e)=>{clearInterval(timerRef.current); changeProgress(25); }}
-                    className="px-4 py-1 rounded-xl bg-[#2a9b9b] hover:bg-[#0e7272] transition-colors duration-500">
+                    className="w-[70px] px-4 py-1 rounded-xl bg-[#2a9b9b] hover:bg-[#9733EE] transition-colors duration-500">
                     25%
                 </button>
+                
+                <button onClick={(e)=>{clearInterval(timerRef.current); changeProgress(50); }}
+                    className= "w-[70px] px-4 py-1 rounded-xl bg-[#2a9b9b] hover:bg-[#9733EE] transition-colors duration-500">
+                    50%
+                </button>
+                
+                <button onClick={(e)=>{clearInterval(timerRef.current); changeProgress(75); }}
+                    className="w-[70px] px-4 py-1 rounded-xl bg-[#2a9b9b] hover:bg-[#9733EE] transition-colors duration-500">
+                    75%
+                </button>
+
+                <button onClick={(e)=>{clearInterval(timerRef.current); changeProgress(100); }}
+                    className="w-[70px] px-4 py-1 rounded-xl bg-[#2a9b9b] hover:bg-[#9733EE] transition-colors duration-500">
+                    100%
+                </button>
+
+
+
         </div>
 
         <div className='flex flex-col gap-4 mt-8'>
