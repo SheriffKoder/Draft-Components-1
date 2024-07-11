@@ -14,7 +14,7 @@ import animationData from "./animation-mark.json"
 const CircularProgress = () => {
 
     const [prog, setProg] = useState<string>("100%");
-    const [length, setLength] = useState<number>(112);
+    const [length, setLength] = useState<number>(95);
     const [busy, setBusy] = useState(false);
 
     // allow to clear the timer interval and set a new one when clicking the buttons, make sure to use window.setInterval
@@ -45,13 +45,15 @@ const CircularProgress = () => {
 
         // Circular progress %
         // relate to the progress bar boundary again
-        // 5 is just for end position adjustment
-        let progress = ((currentTrack/(338)*338)-338-100-5)*-1;
-        setLength((progress));
+        let progress = ((currentTrack/(338)*338)-338-100-10)*-1;
+        // setLength((progress));
+        // -15 is just for end position adjustment
+        (+currentProgress > 95) ? setLength(progress-15) : setLength((progress));;   
 
 
-        if (+currentProgress < 2 ) {
-            setLength(440);
+
+        if ((+currentProgress < 4 && +currentProgress !== 0) ) {
+            setLength(449);
         }   
     };
 
@@ -64,7 +66,7 @@ const CircularProgress = () => {
         // num/100 >= 0.5 ? factor = 20*(num/100) : 0;
 
         // cut like filled bar for un-complete shape at 100%, with a rotation added in css to shift the start position
-        let factor = (90*num/100);
+        let factor = (100*num/100);
 
         let fill = (Math.floor(450-(450*(num/100))+factor));
 
@@ -98,12 +100,14 @@ const CircularProgress = () => {
                         clearInterval(timerRef.current);
                         setProg(`${num}%`)  // just a double check as final % number can increase a bit buggy
                         setBusy(false);
-                    } else if (i === 112) {
-                        setProg("100%");
                     } else {
                         setProg(`${Math.floor((number/340*100)-(+prog.split("%")[0])-1)*-1}%`);
                         // prog.style.strokeDashoffset=`${i}`; 
                         setLength(i);   
+                    }
+
+                    if (i === 112) {
+                        setProg("100%");
                     }
 
                 // Forward progress / incrementing
@@ -117,13 +121,19 @@ const CircularProgress = () => {
                         clearInterval(timerRef.current);
                         setProg(`${num}%`)
                         setBusy(false);
-                    }
-                    else if (i < 112) {
-                        setProg("100%");
+                    
+
                     } else {
-                        setProg(`${Math.floor((number/340*100)+(+prog.split("%")[0])-1)}%`);
+                        const displayedNumber = Math.floor((number/340*100)+(+prog.split("%")[0])-1);
+                        // condition to avoid displaying more than 100%
+                        if (displayedNumber <= 100) setProg(`${displayedNumber}%`);
                         // prog.style.strokeDashoffset=`${i}`; 
-                        setLength(i);   
+                        //-5 just for alignment
+                        (displayedNumber > 95) ? setLength(i-5) : setLength(i);   
+                    }
+
+                    if (i < 110) {
+                        setProg("100%");
                     }
                 }
 
@@ -134,13 +144,13 @@ const CircularProgress = () => {
 
 
   return (
-    <section className="FullScreen_CenteredFlex bg-[rgb(2,8,18)]">
+    <section className="FullScreen_CenteredFlex ambientBackground">
         <div className="circularProgress_skill">
             <div className="circularProgress_outer">
                 <div className="circularProgress_inner">
                     <div id="circularProgress_number">
                         
-                        {prog === "100%" ? 
+                        {+prog.split("%")[0] >= 99 ? 
                         (
                             <Lottie 
                             options={defaultOptions}
@@ -156,7 +166,7 @@ const CircularProgress = () => {
 
             {/* takes length between 112(100%) and 450 (0%) */}
             <svg id="circularProgress_svg" 
-            className="rotate-[130deg]" style={{strokeDashoffset: length  }}
+            className="rotate-[125deg]" style={{strokeDashoffset: length  }}
             xmlns="http://www.w3.org/2000/svg" version="1.1" width="148px" height="148px">
                 <defs>
                     <linearGradient id="GradientColor">
@@ -169,7 +179,13 @@ const CircularProgress = () => {
             </svg>
         </div>
 
-        <div className='flex flex-row items-center justify-center gap-4 mt-8'>
+        <div className='flex flex-row items-center justify-center gap-4 mt-12'>
+
+                <button onClick={(e)=>{clearInterval(timerRef.current); changeProgress(1); }}
+                    className="w-[70px] px-4 py-1 rounded-xl bg-[#2a9b9b] hover:bg-[#9733EE] transition-colors duration-500">
+                    1%
+                </button>
+
                 <button onClick={(e)=>{clearInterval(timerRef.current); changeProgress(25); }}
                     className="w-[70px] px-4 py-1 rounded-xl bg-[#2a9b9b] hover:bg-[#9733EE] transition-colors duration-500">
                     25%
@@ -199,7 +215,10 @@ const CircularProgress = () => {
                 h-[20px] rounded-full bg-slate-500 overflow-hidden`}>
                 <div style={{width: `${prog}`, borderRadius: `${+prog.split("%")[0]/1.5}px`}}
                 className={`
-                h-full cursor-pointer bg-gradient-to-r from-[#387ca4] to-[#39d0b7b4]`}></div>
+                h-full cursor-pointer bg-gradient-to-r from-[#9733EE] to-[#39d0b7b4]
+                blur-sm`}>
+                    
+                </div>
 
                 </div>
         </div>
