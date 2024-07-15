@@ -63,3 +63,22 @@ export const componentsElements = [
         description: "Circle progress bar animation, gradient color and displays a graphic on completion",
     },
 ]
+
+
+export const componentsGsap = [
+    {
+        link: "/gsapBoxes1",
+        title: "box animations",
+        description: "multiple animations with ScrollTrigger",
+    },
+    {
+        link: "/sectionLayering",
+        title: "Sections vertical Layering",
+        description: "smooth section transition animation vertically with ScrollTrigger",
+    },
+    {
+        link: "/sectionLayeringHorizontal",
+        title: "Sections horizontal Layering",
+        description: "smooth section transition animation horizontally with ScrollTrigger",
+    },
+]

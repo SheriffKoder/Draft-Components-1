@@ -1,5 +1,12 @@
 import Image from "next/image";
-import {componentsCSSPerspective, componentsUI,components3D, componentsElements} from "@/constants/HomeComponents";
+import {
+  componentsCSSPerspective, 
+  componentsUI,
+  components3D,
+  componentsElements,
+  componentsGsap,
+} from "@/constants/HomeComponents";
+
 import HomeCardLink from "@/components/home/HomeCardLink";
 import mainLogo from "@/public/mainLogo.png"
 
@@ -63,6 +70,11 @@ export default function Home() {
 
           <h1 className="col-span-full text-2xl font-bold mt-20">Elements</h1>
           {componentsElements.map((component) => (
+            <HomeCardLink key={component.title} cmp={component} />
+          ))}
+
+          <h1 className="col-span-full text-2xl font-bold mt-20">GSAP</h1>
+          {componentsGsap.map((component) => (
             <HomeCardLink key={component.title} cmp={component} />
           ))}
           
