@@ -91,11 +91,39 @@ const page = () => {
     //     markers: true,
     // })
 
+    // enable for all scroll triggers
+    ScrollTrigger.defaults({
+        // markers: true,
+    })
+
+
+    // do things when in the boundaries of the scroll trigger
+    ScrollTrigger.create({
+        trigger: ".box4",
+        start: "top 100px",
+        onEnter: ()=> console.log("enter"),
+        onLeave: ()=> console.log("leave"),
+        onEnterBack: ()=> console.log("enter back"), // pass the end up
+        onLeaveBack: ()=> console.log("leave back"), // pass the start up
+        // onUpdate: (self) => console.log("update", self.progress.toFixed(3)),    
+        // value between 0->1 for the % of start-end of the scroll trigger
+        onToggle: (self) => console.log("toggled", self.isActive),
+        // true if we came to the boundaries of the scroll trigger, false if came out
+        toggleClass: "gradientBGButton",
+        markers: true,
+        id: "box4", // identifies the marker
+
+        start: "top center",
+        end: "top, 100px",
+        // scroller: ".box4-dummy",    // watch for an element instead of the view port
+        // horizontal: true,           // watch horizontally instead of vertically
+
+    });
+
+    // let trigger = ScrollTrigger.getById("box4");
+
 
     },[]);
-
-
-
 
 
 
@@ -128,6 +156,21 @@ const page = () => {
                 </div>
             </div>
         </div>
+
+
+        <div className='box4-container w-[100%] h-[100vh] pt-[300px] pl-[100px] border-t'>
+            <span>// do some things when within the scroll boundary</span>
+            {/* <div className='box4-dummy
+            w-[100px] h-[100px] box33 bg-slate-700 flex items-center justify-center'>
+                dummy
+            </div> */}
+
+            <div className='w-[100px] h-[100px] box4 bg-slate-500 flex items-center justify-center'>
+                ScrollTrigger4
+            </div>
+        </div>
+
+
         <div className='w-[100%] h-[100vh] pt-[300px] pl-[100px] border-t'>
             
         </div>
