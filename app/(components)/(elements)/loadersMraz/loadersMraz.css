@@ -1,0 +1,194 @@
+:root {
+    --bg: #F6F8FC;
+    --primary: #705CFF;
+    --secondary: #705CFF60;
+    --h2-color: #5B5D72;
+    --cube-side: 2.75rem;
+    --cube-side-half: calc(var(--cube-side) / 2);
+}
+
+
+
+.MrazloaderContainer {
+    width: 7rem;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5849c91f;
+    border: 2px solid #382e82be;
+    border-radius: 12px;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.MrazloaderContainer:hover {
+    background-color: #5849c92c;
+    border: 2px solid #4b3eaed5;
+    scale: 1.1;
+    transition: all 0.05s linear;
+
+}
+
+.Mrazloader-1 {
+
+    /* width*/
+    width: 4rem;
+
+    /* height */
+    aspect-ratio: 1.154;
+
+    /* circles */
+    --_g: no-repeat radial-gradient(
+      farthest-side,var(--primary) 90%,#ffffff00);
+
+    /* multiple circles */
+    background: 
+      var(--_g) 50%  0%,
+      var(--_g) 0    100%,
+      var(--_g) 100% 100%;
+
+    /* size of circles */
+    background-size: 35% calc(35%*1.154);
+
+    animation: l16 1s infinite;
+}
+
+/* switch positions for each circle */
+@keyframes l16 { 
+    50%, 100% {background-position: 
+        100% 100%,
+        50% 0,
+        0 100%} 
+}
+
+
+/* ///////////////// Loader 2 */
+
+/* normal div */
+.Mrazloader-2 {
+    height: 2.5rem;
+    width: 2.5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 0.8rem solid;
+    border-color: var(--primary) var(--secondary);
+    animation: l1 1s infinite;
+}
+
+/* rotate 0.5turn */
+@keyframes l1 {to{transform: rotate(.5turn)}}
+
+
+/* ///////////////// Dots loader */
+
+.Mrazlds-ellipsis,
+  .lds-ellipsis div {
+    box-sizing: border-box;
+  }
+  .Mrazlds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  /* three circles beside each other */
+  .Mrazlds-ellipsis div {
+    position: absolute;
+    top: 33.33333px;
+    width: 13.33333px;
+    height: 13.33333px;
+    border-radius: 50%;
+    background: var(--primary);
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  
+  /* grow #1 */
+  .Mrazlds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+
+  /* move #2 */
+  .Mrazlds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+
+  /* move #3 */
+  .Mrazlds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+
+  /* shrink #4*/
+  .Mrazlds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+
+  
+  /* grow */
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* shrink */
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+
+  /* move left */
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(1.5rem, 0);
+    }
+  }
+
+
+/* ///////////////// Loader 3 */
+
+
+  /* dark circle border */
+.Mrazloader-3 {
+    width: 4rem;
+    height: 4rem;
+    border: 0.8rem solid var(--secondary);
+    border-radius: 50%;
+    position: relative;
+    transform:rotate(45deg);
+    box-sizing: border-box;
+}
+
+
+.Mrazloader-3::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    inset: -0.75rem;
+    border-radius: 50%;
+    border: 0.8rem solid var(--primary);
+    animation: prixClipFix 2s infinite linear;
+}
+
+@keyframes prixClipFix {
+    0%   {clip-path:polygon(50% 50%,0 0,    0 0,        0 0,         0 0,        0 0        )}
+    25%  {clip-path:polygon(50% 50%,0 0,    100% 0,     100% 0,      100% 0,     100% 0     )}
+    50%  {clip-path:polygon(50% 50%,0 0,    100% 0,     100% 100%,   100% 100%,  100% 100%  )}
+    75%  {clip-path:polygon(50% 50%,0 0,    100% 0,     100% 100%,   0 100%,     0 100%     )}
+    100% {clip-path:polygon(50% 50%,0 0,    100% 0,     100% 100%,   0 100%,     0 0        )}
+}

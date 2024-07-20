@@ -62,6 +62,11 @@ export const componentsElements = [
         title: "Circular Progress",
         description: "Circle progress bar animation, gradient color and displays a graphic on completion",
     },
+    {
+        link: "/loadersMraz",
+        title: "More loading UIs",
+        description: "Animated loaders",
+    },
 ]
 
 
