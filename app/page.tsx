@@ -5,6 +5,7 @@ import {
   components3D,
   componentsElements,
   componentsGsap,
+  componentsBackground,
 } from "@/constants/HomeComponents";
 
 import HomeCardLink from "@/components/home/HomeCardLink";
@@ -65,6 +66,11 @@ export default function Home() {
 
           <h1 className="col-span-full text-2xl font-bold mt-20">Layout & UI</h1>
           {componentsUI.map((component) => (
+            <HomeCardLink key={component.title} cmp={component} />
+          ))}
+
+          <h1 className="col-span-full text-2xl font-bold mt-20">Backgrounds</h1>
+          {componentsBackground.map((component) => (
             <HomeCardLink key={component.title} cmp={component} />
           ))}
 

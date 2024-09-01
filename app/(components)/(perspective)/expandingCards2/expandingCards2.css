@@ -1,0 +1,59 @@
+.expandingCards2_container {
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    margin: 100px;
+  }
+  
+  .expandingCards2_cube {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform: rotate3d(1, 0, 0, 50deg) rotateZ(50deg);
+    /* transform: rotateX(0deg) rotateY(-85deg) rotateZ(00deg); */
+    transition: all 0.5s linear;
+
+  }
+  
+  .expandingCards2_face {
+    width: 200px;
+    height: 200px;
+    background: rgb(55, 13, 118);
+    border: 2px solid rgb(117, 25, 255);
+    position: absolute;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    border-radius: 10px;
+  }
+
+
+  .expandingCards2_front {
+    /* transform: translateZ(100px); */
+    transition: all 0.5s linear;
+    opacity: 0;
+  }
+  
+  .expandingCards2_container:hover .expandingCards2_front {
+    transform: translateZ(100px);
+  }
+
+  .expandingCards2_container .expandingCards2_back {
+    transform: translateZ(100px) rotateY(0deg);
+    opacity: 0;
+    /* transform: translateZ(-100px) rotateY(180deg); */
+  }
+/* 
+  .container:hover .cube {
+    transform: rotateX(10deg) rotateY(-30deg) rotateZ(10deg);
+  } */
+
+  .expandingCards2_back {
+    /* transform: rotateY(0deg); */
+    /* transform: rotateY(180deg); */
+    transition: all 0.5s linear;
+  }

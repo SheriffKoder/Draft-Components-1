@@ -26,6 +26,20 @@ export const componentsUI = [
         title: "Header + Footer",
         description: "Reusable sticky header and footer",
     },
+]
+
+
+export const componentsBackground = [
+    {
+        link: "/Shadow01",
+        title: "Radial background Shadow 1",
+        description: "Background for cards, text etc..",
+    },
+    {
+        link: "/Shadow02",
+        title: "Radial background Shadow 2",
+        description: "Background for cards",
+    },
     {
         link: "/backgroundTransitionSwitch",
         title: "Background color transition",

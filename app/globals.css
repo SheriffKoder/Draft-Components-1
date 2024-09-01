@@ -50,7 +50,7 @@ body {
 
 
 .ambientBackground {
-  @apply bg-[rgb(2,8,18)]
+  @apply bg-[#020812]
 }
 .gradientRoundButton {
   @apply rounded-[1rem]  bg-gradient-to-r from-[#387ca4] to-[#39d0b7b4]
