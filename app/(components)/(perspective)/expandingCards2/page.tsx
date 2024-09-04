@@ -21,12 +21,13 @@ useGSAP(()=> {
 
 // one start-end trigger to rule them all
 let tl = gsap.timeline({
+  
   scrollTrigger: {
       trigger: ".expandingCards2_container",
       start: "0px 50%", // desktop
       // start: "0px 35%", //phone
       end: "bottom 20%",  //end, scroll end
-      scrub: 1,
+      scrub: 3,   // slow the animation
       markers: true,
       pin: ".main_container",
 
@@ -39,7 +40,7 @@ tl.add("front-end")
     // duration: 1,
     translateZ: 0,
     opacity: 1,
-
+    delay: 1,
 }, "front-end")
 .to(".cards_para1", {
   //  duration: 0.3,
@@ -50,6 +51,7 @@ tl.add("front-end")
   //  duration: 1,
     translateY: 0,
     opacity: 1,
+    // delay: 5,
 }, "front-end")
 
 
@@ -59,6 +61,8 @@ tl.add("front-end")
   //  duration: 1,
     translateZ: 100,
     opacity: 1,
+    delay: 1,
+
 }, "back-end")
 .to(".cards_para2", {
   //  duration: 0.3,
@@ -69,6 +73,7 @@ tl.add("front-end")
   //  duration: 1,
     translateY: 0,
     opacity: 1,
+    delay: 0,
 }, "back-end")
 
 // third set of animations running in the same time
@@ -77,17 +82,19 @@ tl.add("front-end")
   // duration: 1,
    translateZ: 0,
    opacity: 0,
+   delay: 1,
 }, "close")
 .to(".expandingCards2_front", {
   // duration: 1,
-  delay: 1,
   //  translateZ: 100,
    opacity: 0,
+   delay: 1,
 }, "close")
 .to(".expandingCards2_back", {
   // duration: 1,
    translateZ: 0,
    opacity: 0,
+   delay: 1,
 }, "close")
 .to(".cards_para3", {
   //  duration: 0.3,
@@ -99,13 +106,21 @@ tl.add("front-end")
   // delay: 1,
   //  translateZ: 100,
    opacity: 1,
+   delay: 1,
 }, "close")
 .to(".cards_para4", {
   //  duration: 1,
     translateY: 0,
     opacity: 1,
+    // delay: 3,
 }, "close")
-
+// some dummy delay
+.to(".cards_para1", {
+   duration: 2,
+    // translateY: 10,
+    opacity: 1,
+    delay: 3,
+}, "close")
 
 
 

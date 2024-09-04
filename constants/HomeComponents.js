@@ -100,4 +100,14 @@ export const componentsGsap = [
         title: "Sections horizontal Layering",
         description: "smooth section transition animation horizontally with ScrollTrigger",
     },
+    {
+        link: "/sectionLayeringHorizontal2",
+        title: "Horizontal gallery",
+        description: "builds on horizontal layering with animated item inside",
+    },
+    {
+        link: "/expandingCards2",
+        title: "Expanding Cards",
+        description: "Expanding cards with GSAP animation",
+    },
 ]
