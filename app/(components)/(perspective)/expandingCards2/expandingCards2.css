@@ -2,8 +2,10 @@
     width: 200px;
     height: 200px;
     perspective: 1000px;
-    margin: 100px;
+    /* margin: 100px; */
   }
+
+  
   
   .expandingCards2_cube {
     position: relative;
@@ -15,6 +17,7 @@
     transition: all 0.5s linear;
 
   }
+
   
   .expandingCards2_face {
     width: 200px;
@@ -30,6 +33,13 @@
     font-size: 2rem;
     border-radius: 10px;
   }
+
+
+  /* phone */
+  /* .expandingCards2_face {
+    width: 150px;
+    height: 150px;
+  } */
 
 
   .expandingCards2_top {

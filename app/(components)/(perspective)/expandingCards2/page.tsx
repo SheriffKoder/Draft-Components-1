@@ -14,7 +14,9 @@ const page = () => {
   // *gsap from ?
   // *proper scroll triggers to animate alternatively
   // *maybe try a timed timeline with equal delay
-  // responsive start,end triggers
+  // *responsive start,end triggers
+  // add phone media to face css and trigger animation
+  // adjust the gap between cards/text in responsive modes
 
 useGSAP(()=> {
 
@@ -23,13 +25,13 @@ useGSAP(()=> {
 let tl = gsap.timeline({
   
   scrollTrigger: {
-      trigger: ".expandingCards2_container",
-      start: "0px 50%", // desktop
-      // start: "0px 35%", //phone
-      end: "bottom 20%",  //end, scroll end
+      trigger: ".main_container",
+      start: "0px 0%", // phone
+      // start: "0px 30%", // desktop
+      end: "bottom 0%",  //end, scroll end
       scrub: 3,   // slow the animation
       markers: true,
-      pin: ".main_container",
+      pin: ".expandingCards2_area",
 
   }
 })
@@ -136,36 +138,43 @@ tl.add("front-end")
 
     </div>
 
+    {/* the area is the trigger to start the animation*/}
+    <div className="expandingCards2_area h-[100vh] md:h-[50vh] border overflow-hidden">
+
     {/* container */}
-    {/* main container is the scroll pinned element */}
-    <div className="flex flex-col border md:h-[50vh] bg-slate-800 main_container">
+    {/* main container is the scroll pinned element 
+    high height to gain more start to end time space*/}
+    <div className="min-h-[100vh] main_container bg-slate-800 max-w-[1200px] mx-auto
+    ">
+          <h1 className="mx-auto pt-[2rem] text-center">How a website is built</h1>
 
-      {/* container header */}
-      <h1 className="mx-auto mt-[2rem]">How a website is built</h1>
-
-      {/* flex row of cards and text areas */}
-      <div className="w-full flex flex-col items-center justify-start
-      relative px-[2rem] flex-1
-      md:flex-row">
-
-        <div className="expandingCards2_container border">
-          <div className="expandingCards2_cube">
-            <div className="expandingCards2_face expandingCards2_top">Design</div>
-            {/* <div className="face bottom">Bottom</div> */}
-            {/* <div className="face left">Left</div> */}
-            {/* <div className="face right">Right</div> */}
-            <div className="expandingCards2_face expandingCards2_front opacity-0">Front</div>
-            <div className="expandingCards2_face expandingCards2_web opacity-0">Website</div>
-            <div className="expandingCards2_face expandingCards2_back opacity-0">Back</div>
+          <div className="subContainer flex flex-col items-center md:justify-center h-[100vh] 
+          md:h-[50vh] py-[2rem] md:py-[0rem] md:mt-[-2rem]
+          border border-red-500">
+            {/* container header */}
+            {/* flex row of cards and text areas */}
+            <div className="w-full flex flex-col items-center justify-end
+            relative px-[2rem]
+            md:flex-row gap-[min(5vh,100px)]">
+              <div className="expandingCards2_container border md:mx-[50px] ">
+                <div className="expandingCards2_cube">
+                  <div className="expandingCards2_face expandingCards2_top">Design</div>
+                  {/* <div className="face bottom">Bottom</div> */}
+                  {/* <div className="face left">Left</div> */}
+                  {/* <div className="face right">Right</div> */}
+                  <div className="expandingCards2_face expandingCards2_front opacity-0">Front</div>
+                  <div className="expandingCards2_face expandingCards2_web opacity-0">Website</div>
+                  <div className="expandingCards2_face expandingCards2_back opacity-0">Back</div>
+                </div>
+              </div>
+              <div className="my-auto relative flex-1 border lg:text-base text-xs">
+                <p className="cards_para1 transition-all duration-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa eligendi, deleniti debitis, iste eum laboriosam tempore officia voluptas vitae quos voluptatibus vero voluptatum, beatae cumque possimus omnis? Quis, eius expedita.</p>
+                <p className="cards_para2 opacity-0 text-green-500 translate-y-10 transition-all duration-700">dolor sit amet consectetur adipisicing elit. Ipsa eligendi, deleniti debitis, iste eum laboriosam tempore officia voluptas vitae quos voluptatibus vero voluptatum, beatae cumque possimus omnis? Quis, eius expedita.</p>
+                <p className="cards_para3 opacity-0 text-red-500 translate-y-10 transition-all duration-700">ipsum dolor sit amet consectetur adipisicing elit. Ipsa eligendi, deleniti debitis, iste eum laboriosam tempore officia voluptas vitae quos voluptatibus vero voluptatum, beatae cumque possimus omnis? Quis, eius expedita.</p>
+                <p className="cards_para4 opacity-0 text-yellow-500 translate-y-10 transition-all duration-700">ipsum dolor sit amet consectetur adipisicing elit. Ipsa eligendi, deleniti debitis, iste eum laboriosam tempore officia voluptas vitae quos voluptatibus vero voluptatum, beatae cumque possimus omnis? Quis, eius expedita.</p>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div className="my-auto relative flex-1 border md:text-base text-xs">
-          <p className="cards_para1 transition-all duration-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa eligendi, deleniti debitis, iste eum laboriosam tempore officia voluptas vitae quos voluptatibus vero voluptatum, beatae cumque possimus omnis? Quis, eius expedita.</p>
-          <p className="cards_para2 opacity-0 text-green-500 translate-y-10 transition-all duration-700">dolor sit amet consectetur adipisicing elit. Ipsa eligendi, deleniti debitis, iste eum laboriosam tempore officia voluptas vitae quos voluptatibus vero voluptatum, beatae cumque possimus omnis? Quis, eius expedita.</p>
-          <p className="cards_para3 opacity-0 text-red-500 translate-y-10 transition-all duration-700">ipsum dolor sit amet consectetur adipisicing elit. Ipsa eligendi, deleniti debitis, iste eum laboriosam tempore officia voluptas vitae quos voluptatibus vero voluptatum, beatae cumque possimus omnis? Quis, eius expedita.</p>
-          <p className="cards_para4 opacity-0 text-yellow-500 translate-y-10 transition-all duration-700">ipsum dolor sit amet consectetur adipisicing elit. Ipsa eligendi, deleniti debitis, iste eum laboriosam tempore officia voluptas vitae quos voluptatibus vero voluptatum, beatae cumque possimus omnis? Quis, eius expedita.</p>
-        </div>
 
       </div>
 
