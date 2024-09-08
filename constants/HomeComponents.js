@@ -87,7 +87,12 @@ export const componentsElements = [
 export const componentsGsap = [
     {
         link: "/gsapBoxes1",
-        title: "box animations",
+        title: "box animations 1",
+        description: "multiple animations with ScrollTrigger",
+    },
+    {
+        link: "/gsapBoxes2",
+        title: "box animations 2",
         description: "multiple animations with ScrollTrigger",
     },
     {
@@ -109,5 +114,11 @@ export const componentsGsap = [
         link: "/expandingCards2",
         title: "Expanding Cards",
         description: "Expanding cards with GSAP animation",
+    },
+    // 
+    {
+        link: "/NavigationLinksProgress",
+        title: "Section Progress /Smooth Nav links",
+        description: "Show to users the progress of scrolling the page, Click on nav links to smoothly head to sections using gsap.utils.toArray",
     },
 ]

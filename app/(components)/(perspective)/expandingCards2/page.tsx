@@ -18,6 +18,11 @@ const page = () => {
   // add phone media to face css and trigger animation
   // adjust the gap between cards/text in responsive modes
 
+  // useGSAP(()=> {
+
+        
+  // },[]);
+
 useGSAP(()=> {
 
 
