@@ -1,0 +1,43 @@
+
+
+/* // Layout */
+
+.myMainImage {
+    background-image: url("https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: top;
+    background-size:200%;
+    background-repeat: repeat;
+    z-index: 0;
+    opacity: 1;
+  }
+  
+  
+  .myMainBlur1 {
+    /* content: ""; */
+    background: #ffffff1a;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  
+    /* width: 100%; */
+    /* height: 100%; */
+    /* top:0; */
+    /* left: 0; */
+    /* z-index: 2; */
+    /* position: absolute; */
+  
+  }
+  
+  .myMainBlur2 {
+    /* content: ""; */
+    background-color: #8ec5fc29;
+    background-image: linear-gradient(62deg, #8ec5fca2 0%, #e0c3fc22 100%);
+    /* opacity: 0.6; */
+  
+    /* width: 100%; */
+    /* height: 100%; */
+    /* top:0; */
+    /* left: 0; */
+    /* z-index: 1; */
+    /* position: absolute; */
+  }
+  

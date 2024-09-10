@@ -26,6 +26,11 @@ export const componentsUI = [
         title: "Header + Footer",
         description: "Reusable sticky header and footer",
     },
+    {
+        link: "/SmoothScroll",
+        title: "Smooth Scroll (Lenis)",
+        description: "Scroll smoothly across page sections throughout the whole website",
+    },
 ]
 
 
@@ -49,6 +54,11 @@ export const componentsBackground = [
         link: "/gradientBackgroundSwitch",
         title: "Gradient background color transition",
         description: "Fluid gradient background color transition (framer motion)",
+    },
+    {
+        link: "/BlurImageBackground",
+        title: "Blurred wallpaper",
+        description: "Blurred Image background with color overlay",
     },
 ]
 

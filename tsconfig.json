@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/(components)/(elements)/IncreasingNumbers", "app/(components)/(elements)/burgerToX", "app/(components)/(GSAP)/gsapBoxes1"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/(components)/(elements)/IncreasingNumbers", "app/(components)/(elements)/burgerToX", "app/(components)/(GSAP)/gsapBoxes1", "app/(components)/(UI)/SmoothScroll/page.tsx"],
   "exclude": ["node_modules"]
 }
