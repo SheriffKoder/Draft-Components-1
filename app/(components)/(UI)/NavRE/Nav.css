@@ -1,0 +1,169 @@
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Nav */
+
+.glass-container-background-3 {
+    background: rgba(255, 255, 255, 0.7);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    /* border: 1px solid rgba(255, 255, 255, 0.07); */
+  }
+  
+  .css_transition {
+    @apply hover:opacity-50 transition-all duration-200 ease-in-out
+  }
+  
+  .nav-user-menu {
+    /* display: flex; */
+    flex-direction: column;
+    height: auto;
+    width: 150px;
+    /* background-color: #43434386; */
+    position:absolute;
+    top: 3.25rem;
+    right: 4rem;
+    /* transform: translate(-70%, 115%); */
+    border: 0;
+    border-radius: 17px;
+    /* padding: 0.5rem 0.75rem; */
+    align-items: center;
+  }
+  
+  
+  /* scroll bars */
+  .light_scroll {
+    background-color: #e2e2e2;
+  }
+  
+  html.light_scroll::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  html.light_scroll::-webkit-scrollbar-track {
+    background-color: #c8c8c8;
+  }
+  
+  html.light_scroll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #8e002f46;
+  }
+  
+  
+  
+  
+  .dark_scroll {
+    background-color: #000000;
+  }
+  
+  html.dark_scroll::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  html.dark_scroll::-webkit-scrollbar-track {
+    /* border-radius: 10px; */
+    background-color: #1d1d1d;
+  }
+  
+  html.dark_scroll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #8e002f46;
+  }
+  
+  
+  
+  
+  
+  html.hide_scroll_light::-webkit-scrollbar {
+    /* display: none; */
+    background-color: #a3a9b5;
+    width: 6px;
+    height: 6px;
+  }
+  html.hide_scroll_light::-webkit-scrollbar-thumb {
+    background-color: #a3a9b5;
+  }
+  
+  
+  
+  html.hide_scroll_dark::-webkit-scrollbar {
+    /* display: none; */
+    background-color: #161616;
+    width: 6px;
+    height: 6px;
+  }
+  html.hide_scroll_dark::-webkit-scrollbar-thumb {
+    background-color: #161616;
+  }
+  
+  /*///////////////////////////////////////////////////////*/
+  /* nav bar theme button toggle animation */
+  
+  .toggle-animation-light {
+    width: 100%;
+    transition-property: width;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+  }
+  
+  .toggle-animation-dark {
+    width: 23px;
+    transition-property: width;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+  }
+  
+  
+  
+  
+  .toggle-animation-right {
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-name: right-toggle;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+  
+  
+  }
+  
+  .toggle-animation-left {
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-name: left-toggle;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+  
+  }
+  
+  @keyframes right-toggle {
+    from {
+      /* margin-right: 0; */
+      /* margin-left: 1.9rem; */
+      /* margin-right: 0; */
+  
+    }
+    to {
+      /* margin-right: 1.9rem; */
+      /* margin-left: 0; */
+      /* margin-right: auto; */
+      padding-right: 2rem;
+  
+    }
+  }
+  
+  @keyframes left-toggle {
+    from {
+      /* margin-left: 0; */
+      /* margin-right: auto; */
+  
+    }
+    to {
+      /* margin-left: auto; */
+      /* margin-right: 0.25rem; */
+      /* margin-right: 0; */
+      padding-left: 2rem;
+  
+    }
+  }

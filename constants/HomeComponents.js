@@ -31,6 +31,11 @@ export const componentsUI = [
         title: "Smooth Scroll (Lenis)",
         description: "Scroll smoothly across page sections throughout the whole website",
     },
+    {
+        link: "/NavRE",
+        title: "Navigation from RE website",
+        description: "Responsive nav bar with dark mode change and scroll bar edits",
+    },
 ]
 
 
