@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-const colors = require('./app/(components)/(UI)/Nav/constants.jsx');
+const colors = require('./app/(components)/(UI)/NavRE/constants.jsx');
 
 
 const config: Config = {

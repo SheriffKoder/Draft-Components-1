@@ -9,7 +9,7 @@ const page = () => {
   >
 
       {/* blur */}
-      <div className="absolute myMainImage w-full h-full">
+      <div className="absolute myMainImage w-full h-full dark:brightness-[1] transition-all duration-75">
         <div className="absolute z-0 w-full h-full myMainBlur1"></div>
         <div className="absolute z-1 w-full h-full myMainBlur2"></div>
       </div>

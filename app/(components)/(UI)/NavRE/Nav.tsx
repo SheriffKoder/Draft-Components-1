@@ -18,7 +18,7 @@ import { useSession, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 
-const constants = require('./constants');
+import constants from "@/app/(components)/(UI)/NavRE/constants";
 import { nav_link_type } from "./types";
 import Nav_svg from "@/public/SVG/nav_link";
 import Nav_user_logo from "@/public/SVG/nav_user_logo";

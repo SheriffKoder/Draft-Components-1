@@ -96,6 +96,16 @@ export const componentsElements = [
         title: "More loading UIs",
         description: "Animated loaders",
     },
+    {
+        link: "/Close sign",
+        title: "Close sign",
+        description: "x",
+    },
+    {
+        link: "/ImagePicker",
+        title: "Image picker",
+        description: "Custom button to image input and display the image live",
+    },
 ]
 
 
