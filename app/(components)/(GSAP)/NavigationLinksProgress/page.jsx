@@ -4,6 +4,7 @@ import gsap from 'gsap'
 import React from 'react'
 import {ScrollTrigger, ScrollToPlugin} from "gsap/all";
 
+import "./Navigation.css"
 // smooth scroll nav links and progress bars
 // https://codepen.io/GreenSock/pen/bGVjLwG?editors=0010
 
@@ -13,6 +14,34 @@ const page = () => {
 
     useGSAP(()=> {
 
+        // general progress bar
+        gsap.from(".line-0", {
+            scrollTrigger: {
+                trigger: "#zero",
+                scrub: true,
+                start: "top bottom",
+                end: "bottom top",
+                // markers: true,
+            },
+            scaleX: 0,
+            transformOrigin: "left center", 
+            ease: "none"
+        });
+
+        gsap.from(".line-0-s", {
+            scrollTrigger: {
+                trigger: "#zero-s",
+                scrub: true,
+                start: "bottom bottom",
+                end: "bottom top",
+                markers: true,
+                pin: true,
+            },
+            translateX: "-100vw",
+            transformOrigin: "left center", 
+            ease: "none"
+        });
+            
         // animation with the element vs viewport
         gsap.from(".line-1", {
             scrollTrigger: {
@@ -28,19 +57,7 @@ const page = () => {
           });
 
 
-        // general progress bar
-          gsap.from(".line-one", {
-            scrollTrigger: {
-              trigger: "#one-1",
-              scrub: true,
-              start: "top bottom",
-              end: "bottom top",
-              markers: true,
-            },
-            scaleX: 0,
-            transformOrigin: "left center", 
-            ease: "none"
-          });
+
 
         // pin the container, animate when entering/exiting the container
         // --- ORANGE PANEL ---
@@ -123,15 +140,29 @@ const page = () => {
             </div>
         </div>
 
-        <section id="one-1" className="relative
+        <section id="zero" className="relative
         w-full h-[200vh] border flex flex-col items-center justify-start pt-[2rem] 
         ">
-        <span className='line-one sticky top-[2rem]
+        <span className='line-0 sticky top-[2rem]
             w-full max-w-[800px] h-[8px] mb-[10px] inline-block bg-white'></span>
         </section>
 
+        {/* example on zero */}
+        <section id="zero-s" className="relative
+        w-full h-[100vh] border flex flex-col items-center justify-center bg-black text-white
+        ">
+            <span className='line-0-s absolute left-0 mask_nav_gsap
+                w-full h-full bg-[#4b1fdb]
+                flex items-center justify-center  text-white'>
+                    {/* <span className="relative text-[10rem]">Hello world</span> */}
+            </span>
+            <div className="text-[10rem]">
+                Hello world
+            </div>
+        </section>
 
-        <section id='two' className='red 
+
+        <section id='one' className='red 
         w-full h-[100vh] border flex flex-col items-center justify-center bg-slate-800'>
             <span className='line-1
             w-full max-w-[800px] h-[8px] mb-[10px] relative inline-block bg-white'></span>
@@ -140,7 +171,7 @@ const page = () => {
             </p>
         </section>
 
-        <section id='three' className='orange
+        <section id='two' className='orange
         w-full h-[100vh] border flex flex-col items-center justify-center'>
             <span className='line-2
             w-full max-w-[800px] h-[8px] mb-[10px] relative inline-block bg-white'></span>
@@ -149,7 +180,7 @@ const page = () => {
             </p>
         </section>
 
-        <section id='four' className='purple 
+        <section id='three' className='purple 
         w-full h-[100vh] border flex flex-col items-center justify-center bg-slate-800'>
             <span className='line-3
             w-full max-w-[800px] h-[8px] mb-[10px] relative inline-block bg-white'></span>
@@ -159,18 +190,18 @@ const page = () => {
         </section>
 
 
-        <section id="five" class="panel gray 
+        <section id="four" className="panel gray 
         w-full h-[100vh] border flex flex-col items-center justify-center bg-slate-800">
             <p>DONE!</p>
         </section>
 
         <nav className='border fixed top-[10px] right-[10px] bg-[#0000007d] px-10px rounded-[10px]
         text-white'>
-            <div><a href='#one'>Section one</a></div>
-            <div><a href='#two'>Section two</a></div>
-            <div><a href='#three'>Section three</a></div>
-            <div><a href='#four' className="activeCSS:text-red-500">Section four</a></div>
-            <div><a href='#five'>Section five</a></div>
+            <div><a href='#zero'>Section one</a></div>
+            <div><a href='#one'>Section two</a></div>
+            <div><a href='#two'>Section three</a></div>
+            <div><a href='#three' className="activeCSS:text-red-500">Section four</a></div>
+            <div><a href='#four'>Section five</a></div>
         </nav>
     
     </>

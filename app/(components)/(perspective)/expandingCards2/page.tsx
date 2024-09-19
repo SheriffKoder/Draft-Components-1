@@ -31,29 +31,41 @@ let tl = gsap.timeline({
   
   scrollTrigger: {
       trigger: ".main_container",
-      start: "0px 0%", // phone
-      // start: "0px 30%", // desktop
+      // start: "0px 0%", // phone
+      start: "0px 30%", // desktop
       end: "bottom 0%",  //end, scroll end
       scrub: 3,   // slow the animation
       markers: true,
       pin: ".expandingCards2_area",
+      snap: 1,
+
+    //   snap: {
+    //     snapTo: 'labels', // snap to the closest label in the timeline
+    //     duration: { min: 0.2, max: 0.2 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+    //     delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
+    //     ease: 'power1.inOut' // the ease of the snap animation ("power3" by default)
+    // }
 
   }
 })
 
 // first set of animations running in the same time
-tl.add("front-end")
+tl
+.add("front-end")
+// .addLabel('front-end')
 .to(".expandingCards2_front", {
     // duration: 1,
     translateZ: 0,
     opacity: 1,
     delay: 1,
 }, "front-end")
+// .addLabel('front-end')
 .to(".cards_para1", {
   //  duration: 0.3,
     // translateY: 0,
     // opacity: 0,
 }, "front-end")
+// .addLabel('front-end')
 .to(".cards_para2", {
   //  duration: 1,
     translateY: 0,
@@ -64,6 +76,7 @@ tl.add("front-end")
 
 // second set of animations running in the same time
 .add("back-end")
+// .addLabel('back-end')
 .to(".expandingCards2_back", {
   //  duration: 1,
     translateZ: 100,
@@ -71,11 +84,13 @@ tl.add("front-end")
     delay: 1,
 
 }, "back-end")
+// .addLabel('back-end')
 .to(".cards_para2", {
   //  duration: 0.3,
     // translateY: 0,
     // opacity: 0,
 }, "back-end")
+// .addLabel('back-end')
 .to(".cards_para3", {
   //  duration: 1,
     translateY: 0,
@@ -85,29 +100,34 @@ tl.add("front-end")
 
 // third set of animations running in the same time
 .add("close")
+// .addLabel('close')
 .to(".expandingCards2_top", {
   // duration: 1,
    translateZ: 0,
    opacity: 0,
    delay: 1,
 }, "close")
+// .addLabel('close')
 .to(".expandingCards2_front", {
   // duration: 1,
   //  translateZ: 100,
    opacity: 0,
    delay: 1,
 }, "close")
+// .addLabel('close')
 .to(".expandingCards2_back", {
   // duration: 1,
    translateZ: 0,
    opacity: 0,
    delay: 1,
 }, "close")
+// .addLabel('close')
 .to(".cards_para3", {
   //  duration: 0.3,
     // translateY: 0,
     // opacity: 0,
 }, "close")
+// .addLabel('close')
 .to(".expandingCards2_web", {
   // duration: 1,
   // delay: 1,
@@ -115,12 +135,14 @@ tl.add("front-end")
    opacity: 1,
    delay: 1,
 }, "close")
+// .addLabel('close')
 .to(".cards_para4", {
   //  duration: 1,
     translateY: 0,
     opacity: 1,
     // delay: 3,
 }, "close")
+// .addLabel('close')
 // some dummy delay
 .to(".cards_para1", {
    duration: 2,

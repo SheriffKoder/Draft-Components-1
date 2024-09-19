@@ -143,7 +143,17 @@ export const componentsGsap = [
     // 
     {
         link: "/NavigationLinksProgress",
-        title: "Section Progress /Smooth Nav links",
+        title: "*Section Progress /Smooth Nav links",
         description: "Show to users the progress of scrolling the page, Click on nav links to smoothly head to sections using gsap.utils.toArray",
+    },
+    {
+        link: "/ParallaxBoxes",
+        title: "Parallax Boxes",
+        description: "Boxes display from the bottom on scroll, each with different speed",
+    },
+    {
+        link: "/ScrollFitText",
+        title: "Reading effect",
+        description: "Text has color fill that animates with scroll, each line is independent",
     },
 ]
