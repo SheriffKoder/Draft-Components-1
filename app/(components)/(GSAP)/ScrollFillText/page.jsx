@@ -10,6 +10,7 @@ import "./Navigation.css"
 
 const Tween = () => {
 
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
     useGSAP(()=> {
 
@@ -33,7 +34,7 @@ const Tween = () => {
                 scrub: true,
                 start: "top 500px",
                 end: "bottom 200px",
-                markers: true,
+                // markers: true,
                 // pin: true,
             },
             translateX: "-100vw",
@@ -47,15 +48,13 @@ const Tween = () => {
                 scrub: true,
                 start: "top 300px",
                 end: "bottom 200px",
-                markers: true,
+                // markers: true,
                 // pin: true,
             },
             translateX: "-100vw",
             transformOrigin: "left center", 
             ease: "none"
         });
-            
-
 
 
     },[]);
@@ -119,6 +118,28 @@ const page = () => {
 
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+    useGSAP(()=> {
+
+               // example 2
+               const textElements = gsap.utils.toArray('.textFill_text');
+        
+               textElements.forEach(text => {
+                   gsap.to(text, {
+                     backgroundSize: '100%',
+                     ease: 'none',
+                     scrollTrigger: {
+                       trigger: text,
+                       start: 'center 80%',
+                       end: 'center 20%',
+                       scrub: true,
+                       // markers: true,
+                     },
+                   });
+               });
+
+              
+    
+    },[]);
 
     return (
         <>
@@ -133,6 +154,22 @@ const page = () => {
         <div className="w-full px-[1rem] font-semibold text-center md:text-left h-100vh text-[5vw]">
             <Tween/>
         </div>
+
+
+        {/* https://codepen.io/Juxtopposed/pen/mdQaNbG */}
+        <div className="flex flex-col justify-center items-start h-[200vh] p-[10%] gap-4
+        bg-[##0D0D0D]">
+            <h1 className="textFill_text">TEXT EFFECT<span>WOAH</span></h1>
+            <h1 className="textFill_text">GSAP<span>AND CLIPPING</span></h1>
+            <h1 className="textFill_text">CRAZYY<span>CRAZYY</span></h1>
+            <h1 className="textFill_text">HOVER ON ME
+                <span><a href="https://stacksorted.com/text-effects/minh-pham" target="_blank">SOURCE</a></span>
+            </h1>
+            <h1 className="textFill_text">LIKE THIS?
+                <span><a href="https://twitter.com/juxtopposed" target="_blank">LET'S CONNECT</a></span>
+            </h1>
+        </div>
+
 
         <div id="" className='blue pb-[60px]
         w-full h-[100vh] border flex items-center justify-center'>
