@@ -6,7 +6,7 @@ import {ScrollTrigger, ScrollToPlugin} from "gsap/all";
 
 import "./Navigation.css"
 // smooth scroll nav links and progress bars
-// https://codepen.io/GreenSock/pen/bGVjLwG?editors=0010
+// https://codepen.io/Juxtopposed/pen/mdQaNbG
 
 const Tween = () => {
 

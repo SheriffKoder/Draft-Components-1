@@ -36,6 +36,12 @@ export const componentsUI = [
         title: "Navigation from RE website",
         description: "Responsive nav bar with dark mode change and scroll bar edits",
     },
+    // SmoothRevealNav
+    {
+        link: "/SmoothRevealNav",
+        title: "Smooth Reveal Nav",
+        description: "Nav bar that hide on scroll down and (shows on scroll up anywhere) with a smooth transition",
+    },
 ]
 
 
@@ -155,5 +161,10 @@ export const componentsGsap = [
         link: "/ScrollFitText",
         title: "Reading effect",
         description: "Text has color fill that animates with scroll, each line is independent",
+    },
+    {
+        link: "/InfiniteGallery",
+        title: "Infinite gallery",
+        description: "Cards gallery change with scroll or buttons, infinite",
     },
 ]
