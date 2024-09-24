@@ -36,12 +36,13 @@ export const componentsUI = [
         title: "Navigation from RE website",
         description: "Responsive nav bar with dark mode change and scroll bar edits",
     },
-    // SmoothRevealNav
     {
         link: "/SmoothRevealNav",
         title: "Smooth Reveal Nav",
         description: "Nav bar that hide on scroll down and (shows on scroll up anywhere) with a smooth transition",
     },
+
+    
 ]
 
 
@@ -70,6 +71,16 @@ export const componentsBackground = [
         link: "/BlurImageBackground",
         title: "Blurred wallpaper",
         description: "Blurred Image background with color overlay",
+    },
+    {
+        link: "/ParallaxBackground01",
+        title: "Parallax Hero section",
+        description: "Hero section gets hidden by the below section on scroll",
+    },
+    {
+        link: "/ParallaxBackground02",
+        title: "Parallax Hero section (GSAP)",
+        description: "Hero section contains multiple images with different parallax speeds, gets hidden by the below section on scroll",
     },
 ]
 
