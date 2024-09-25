@@ -19,6 +19,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-lottie": "^1.2.4",
+    "smooth-scrollbar": "^8.8.4",
     "tailwindcss-autofill": "^1.0.2",
     "tailwindcss-shadow-fill": "^1.0.1",
     "tailwindcss-text-fill": "^0.2.0"
