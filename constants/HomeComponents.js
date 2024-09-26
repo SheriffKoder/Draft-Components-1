@@ -178,4 +178,9 @@ export const componentsGsap = [
         title: "Infinite gallery",
         description: "Cards gallery change with scroll or buttons, infinite",
     },
+    {
+        link: "/PinnedSideSection",
+        title: "Pinned Side Section",
+        description: "Display multiple images and texts in same container animation, custom scrollBar and smooth scroll ver #2",
+    },
 ]
