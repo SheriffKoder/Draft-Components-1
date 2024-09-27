@@ -38,7 +38,7 @@ export const componentsUI = [
     },
     {
         link: "/SmoothRevealNav",
-        title: "Smooth Reveal Nav",
+        title: "Smooth Reveal Nav (GSAP)",
         description: "Nav bar that hide on scroll down and (shows on scroll up anywhere) with a smooth transition",
     },
 
@@ -182,5 +182,15 @@ export const componentsGsap = [
         link: "/PinnedSideSection",
         title: "Pinned Side Section",
         description: "Display multiple images and texts in same container animation, custom scrollBar and smooth scroll ver #2",
+    },
+    {
+        link: "/ScrollSkewGallery",
+        title: "Scroll Skew Gallery",
+        description: "Multiple images/divs that skew on scroll",
+    },
+    {
+        link: "/ScrollStaggerGallery",
+        title: "Scroll Stagger Gallery",
+        description: "Multiple images/divs that have different scroll delays anim on scroll",
     },
 ]
