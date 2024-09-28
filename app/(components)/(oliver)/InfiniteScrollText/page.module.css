@@ -1,0 +1,36 @@
+
+.main {
+    margin-bottom: 100vh;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.main img {
+    object-fit: cover;
+}
+
+.sliderContainer {
+    position: absolute;
+    top: calc(100vh - 400px); 
+    /* original: 300px */
+}
+
+.slider {
+    position: relative;
+    white-space: nowrap;
+    display: flex;
+}
+
+.slider p {
+    margin: 0px;
+    color: white;
+    font-size: 15vw;
+    font-weight: 500;
+}
+
+.slider p:nth-of-type(2) {
+    position: absolute;
+    left: 100%;
+}

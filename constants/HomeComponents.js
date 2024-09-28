@@ -194,3 +194,12 @@ export const componentsGsap = [
         description: "Multiple images/divs that have different scroll delays anim on scroll",
     },
 ]
+
+
+export const OliverComponents = [
+    {
+        link: "/OliverScrollText",
+        title: "Infinite Loop Text w/ Scroll (GSAP)",
+        description: "Hero text infinite loop with scroll reverse direction animation",
+    },
+]
