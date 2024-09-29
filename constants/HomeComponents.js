@@ -198,7 +198,7 @@ export const componentsGsap = [
 
 export const OliverComponents = [
     {
-        link: "/OliverScrollText",
+        link: "/InfiniteScrollText",
         title: "Infinite Loop Text w/ Scroll (GSAP)",
         description: "Hero text infinite loop with scroll reverse direction animation",
     },

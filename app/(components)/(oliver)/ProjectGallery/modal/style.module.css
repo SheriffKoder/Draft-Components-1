@@ -1,0 +1,37 @@
+/* modal */
+
+/* this will show all the images in col and hide all images but the first */
+.modalContainer {
+    height: 350px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    overflow: hidden;
+}
+
+.modalSlider {
+    height: 100%;
+    width: 100%;
+
+    /* using translate Y we can change the displayed images that are already hidden by the overflow */
+    /* transform: translateY(-300%); */
+
+    /* this to allow the images to change  */
+    position: absolute;
+}
+
+.modal {
+    position: relative;
+
+    /* these lines will make the image centered and have the color as a border like */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal img {
+    height: auto;
+}
