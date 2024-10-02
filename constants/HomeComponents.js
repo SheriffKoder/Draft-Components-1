@@ -201,5 +201,6 @@ export const OliverComponents = [
         link: "/InfiniteScrollText",
         title: "Infinite Loop Text w/ Scroll (GSAP)",
         description: "Hero text infinite loop with scroll reverse direction animation",
+        image: "/cardImages/olivier/InfiniteScrollText.png"
     },
 ]

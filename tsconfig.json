@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/(components)/(elements)/IncreasingNumbers", "app/(components)/(elements)/burgerToX", "app/(components)/(GSAPBasics)/gsapBoxes1", "app/(components)/(UI)/SmoothScroll/page.tsx", "app/(components)/(GSAP)/ScrollFillText/page.jsx", "app/(components)/(GSAP)/InfiniteGallery/page.jsx", "app/(components)/(backgrounds)/ParallaxBackground01/page.jsx", "app/(components)/(GSAP)/ScrollSkewGallery/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/(components)/(elements)/IncreasingNumbers", "app/(components)/(elements)/burgerToX", "app/(components)/(GSAPBasics)/gsapBoxes1", "app/(components)/(UI)/SmoothScroll/page.tsx", "app/(components)/(GSAP)/ScrollFillText/page.jsx", "app/(components)/(GSAP)/InfiniteGallery/page.jsx", "app/(components)/(backgrounds)/ParallaxBackground01/page.jsx", "app/(components)/(GSAP)/ScrollSkewGallery/page.jsx", "components/home/HomeCardLink.tsx"],
   "exclude": ["node_modules"]
 }

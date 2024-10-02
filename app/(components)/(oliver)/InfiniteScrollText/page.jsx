@@ -18,13 +18,6 @@ reset
 
 // 2 change direction on scroll scrub
 
-InfiniteScrollText
-trigger: document.documentElement,
-end: window.innerHeight,
-scrub: 0.25,    // instead of 1 to be more smooth
-onUpdate: e => direction = e.direction * -1, // reverse direction
-requestAnimationFrame(animation);
-
 
 */
 

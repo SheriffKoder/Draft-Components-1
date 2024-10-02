@@ -7,7 +7,7 @@ import {ScrollTrigger, ScrollToPlugin} from "gsap/all";
 import ProjectCard from './ProjectCard';
 
 
-const page = () => {
+const Page = () => {
 
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -121,4 +121,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

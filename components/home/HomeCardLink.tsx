@@ -1,8 +1,9 @@
+import Image from 'next/image';
 import Link from 'next/link'
 import React from 'react'
 
-const HomeCardLink = ({cmp}:{
-    cmp: any
+const HomeCardLink = ({cmp} : {
+  cmp:any
 }) => {
   return (
     <Link
@@ -11,6 +12,13 @@ const HomeCardLink = ({cmp}:{
     // target="_blank"
     // rel="noopener noreferrer"
     >
+        { cmp.image && (
+        <div className='w-full h-[200px] relative mb-[2rem] overflow-hidden rounded-md'>
+          <Image src={cmp.image} fill alt="image"
+          style={{objectFit: "cover"}}
+          className=' hover:scale-[1.01] transition-all duration-300 ease-linear'></Image>
+        </div>
+        )}
         <h2 className="mb-3 text-2xl font-semibold">
         {cmp.title}{" "}
         <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">

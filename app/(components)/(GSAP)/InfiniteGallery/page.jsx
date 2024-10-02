@@ -5,7 +5,7 @@ import React, { useRef } from 'react'
 import {ScrollTrigger, ScrollToPlugin} from "gsap/all";
 
 
-const page = () => {
+const Page = () => {
     // https://codepen.io/GreenSock/pen/LYRwgPo?editors=0010
     
     let cards = [
@@ -157,4 +157,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

@@ -8,7 +8,7 @@ import "./Navigation.css"
 // smooth scroll nav links and progress bars
 // https://codepen.io/GreenSock/pen/bGVjLwG?editors=0010
 
-const page = () => {
+const Page = () => {
 
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -208,4 +208,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

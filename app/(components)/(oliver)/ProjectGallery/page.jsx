@@ -1,7 +1,6 @@
 "use client"
 import React, {useState} from 'react'
 
-import styles from "./page.module.css"
 import Project from './project';
 import Modal from "./modal";
 
@@ -30,13 +29,15 @@ const page = () => {
         }
       ];
 
-      const [modal, setModal] = useState({active: false, index: 0});
+    const [modal, setModal] = useState({active: false, index: 0});
 
   return (
     <main>
-        <div className={styles.main}>
-            <div className={styles.body}>
+        <div className="flex items-center justify-center h-[100vh]">
+            <div className="w-[1000px] flex items-center justify-center flex-col">
                 {
+                    // pass the title and setModal to each list item
+                    // on each, on enter setModal to true/false, index to its index
                     projects.map((project, index) => {
                         return <Project 
                                 key={index} index={index} 
