@@ -18,6 +18,14 @@ reset
 
 // 2 change direction on scroll scrub
 
+InfiniteScrollText
+trigger: document.documentElement,
+end: window.innerHeight,
+scrub: 0.25,    // instead of 1 to be more smooth
+onUpdate: e => direction = e.direction * -1, // reverse direction
+requestAnimationFrame(animation);
+
+
 */
 
 const page = () => {
@@ -75,13 +83,18 @@ const page = () => {
 
   return (
     <ScrollContext>
-    <main className={styles.main}>
-        <Image fill={true} src="https://wallpapers.com/images/hd/majestic-alpine-peaks-7r3jwi77w5uharbr.webp" alt="image"/>
+    <main className={`mb-[100vh] h-[100vh] relative overflow-hidden`}>
+        <Image style={{objectFit:"cover"}} fill={true} src="https://wallpapers.com/images/hd/majestic-alpine-peaks-7r3jwi77w5uharbr.webp" alt="image"/>
 
-        <div className={styles.sliderContainer}>
-            <div ref={slider} className={styles.slider}>
-                <p ref={firstText}>Alpine Peaks - </p>
-                <p ref={secondText}> Alpine Peaks - </p>
+        {/* original -300px */}
+        <div className={`absolute top-[calc(100vh-400px)]`}>
+            <div ref={slider} className="relative whitespace-nowrap flex">
+                <p ref={firstText} className="m-0 text-white text-[15vw] font-[500]">
+                    Alpine Peaks - 
+                </p>
+                <p ref={secondText} className="m-0 text-white text-[15vw] font-[500] absolute left-[100%]"> 
+                    Alpine Peaks - 
+                </p>
             </div>
         </div>
 
