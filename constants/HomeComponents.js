@@ -203,4 +203,10 @@ export const OliverComponents = [
         description: "Hero text infinite loop with scroll reverse direction animation",
         image: "/cardImages/olivier/InfiniteScrollText.png"
     },
+    {
+        link: "/ProjectGallery",
+        title: "ProjectGallery (GSAP) (Framer-motion)",
+        description: "a div showing images with aligned vertical animation switching, framer-motion for entry/exit scale, gsap mouse track",
+        image: "/cardImages/olivier/ProjectGallery.png"
+    },
 ]
