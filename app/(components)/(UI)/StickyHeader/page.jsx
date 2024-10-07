@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import MainLogo from '@/components/LoadingLogo/LogoSVGs/MainLogo'
 
-export const MainNavLinks = [
+const MainNavLinks = [
     {
         text:"Shop",
         href: "/",
@@ -20,7 +20,7 @@ export const MainNavLinks = [
     }
 ]
 
-const page = () => {
+const Page = () => {
   return (
     <main className="relative">
         <header className="fixed w-full pl-4 pr-4 pt-5 pb-8 text-[#ffffff]"
@@ -79,4 +79,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

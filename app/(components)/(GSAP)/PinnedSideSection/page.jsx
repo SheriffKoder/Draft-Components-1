@@ -18,7 +18,7 @@ import "./PinnedSideSection.css";
 
 // https://codepen.io/akapowl/pen/zYqLyPQ/6a2480c123d88dc391faba0ea5cc590f
 
-const page = () => {
+const Page = () => {
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -180,4 +180,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

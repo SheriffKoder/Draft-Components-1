@@ -34,7 +34,7 @@ const Nav = () => {
   let session = {
     user: "hi "
   }
-  const isAuth = status === "authenticated";  //use the status
+  // const isAuth = status === "authenticated";  //use the status
   const router = useRouter();
   const [userIconBG,setUserIconBG] = useState("bg-ui_bright_not_active dark:bg-ui_dark_not_active");
 

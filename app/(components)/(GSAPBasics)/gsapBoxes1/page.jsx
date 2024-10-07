@@ -4,7 +4,7 @@ import gsap from 'gsap'
 import React from 'react'
 import {ScrollTrigger} from "gsap/all";
 
-const page = () => {
+const Page = () => {
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -159,7 +159,7 @@ const page = () => {
 
 
         <div className='box4-container w-[100%] h-[100vh] pt-[300px] pl-[100px] border-t'>
-            <span>// do some things when within the scroll boundary</span>
+            <span>do some things when within the scroll boundary</span>
             {/* <div className='box4-dummy
             w-[100px] h-[100px] box33 bg-slate-700 flex items-center justify-center'>
                 dummy
@@ -180,4 +180,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

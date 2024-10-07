@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 
-export const BurgerToX = () => {
+const BurgerToX = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 

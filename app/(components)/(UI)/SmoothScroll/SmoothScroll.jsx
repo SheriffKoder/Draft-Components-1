@@ -31,7 +31,7 @@ const SmoothScroll = () => {
       }
     }
 
-  })
+  }, [])
 
   return (
     <section className='h-[100vh] border flex flex-col items-center justify-center'>

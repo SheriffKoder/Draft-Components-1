@@ -11,7 +11,7 @@ layer with height, bg-image, fixed and z -1
 
 */
 
-const page = () => {
+const Page = () => {
 
 
 
@@ -64,4 +64,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

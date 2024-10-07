@@ -114,7 +114,7 @@ const Tween = () => {
 
 
 
-const page = () => {
+const Page = () => {
 
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -184,4 +184,4 @@ const page = () => {
 
 }
 
-export default page
+export default Page

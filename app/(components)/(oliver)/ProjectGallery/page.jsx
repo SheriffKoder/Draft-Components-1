@@ -4,7 +4,7 @@ import React, {useState} from 'react'
 import Project from './project';
 import Modal from "./modal";
 
-const page = () => {
+const Page = () => {
 
     const projects = [
         {
@@ -54,4 +54,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

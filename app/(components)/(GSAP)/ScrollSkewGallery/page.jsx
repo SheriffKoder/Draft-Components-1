@@ -7,7 +7,7 @@ import Image from "next/image";
 
 // https://codepen.io/GreenSock/pen/eYpGLYL
 
-const page = () => {
+const Page = () => {
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -90,4 +90,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

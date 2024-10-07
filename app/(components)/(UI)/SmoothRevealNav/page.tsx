@@ -9,7 +9,7 @@ import "./SmoothRevealNav.css"
 // https://codepen.io/GreenSock/pen/qBawMGb
 // https://codepen.io/GreenSock/pen/mdVyPvK
 
-const page = () => {
+const Page = () => {
 
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -50,7 +50,7 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
 
 
 

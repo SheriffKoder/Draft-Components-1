@@ -21,7 +21,7 @@ reset
 
 */
 
-const page = () => {
+const Page = () => {
 
     const firstText = useRef(null);
     const secondText = useRef(null);
@@ -97,4 +97,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

@@ -2,7 +2,7 @@
 import { useInView, useMotionValue, useSpring } from 'framer-motion';
 import React, { useEffect, useRef } from 'react'
 
-export const AnimatedNumbers = ({value}:{value:number}) => {
+const AnimatedNumbers = ({value}:{value:number}) => {
 
   const ref = useRef<null | HTMLSpanElement>(null);
 
@@ -19,7 +19,7 @@ export const AnimatedNumbers = ({value}:{value:number}) => {
   useEffect(()=> {
     springValue.on("change", (latest)=> {
       // console.log(latest);
-      if (ref.current && latest.toFixed(0) <= value) {  // if the component is mounted
+      if (ref.current && +latest.toFixed(0) <= value) {  // if the component is mounted
         ref.current.textContent = latest.toFixed(0);     // remove the decimals
       }
     })

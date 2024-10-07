@@ -18,7 +18,7 @@ main container timeline, elements to y movement calc
 */
 
 
-const page = () => {
+const Page = () => {
 
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -107,4 +107,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

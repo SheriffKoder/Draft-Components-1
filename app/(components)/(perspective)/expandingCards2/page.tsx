@@ -6,7 +6,7 @@ import React from 'react'
 import {ScrollTrigger} from "gsap/all";
 import "./expandingCards2.css";
 
-const page = () => {
+const Page = () => {
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -217,4 +217,4 @@ tl
   )
 }
 
-export default page
+export default Page
