@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react'
 import { motion } from 'framer-motion';
-
+import Curve from "./Curve";
 /*
 work on the html/css
 then add the variants, it will operate by itself
@@ -13,17 +13,17 @@ the custom framer property based on index for link delay animation
 
 */
 
-
+// the calc function for the curve step, so the menu can extend more to hide the animating out curve
 export const menuSlide = {
     initial: {
-        x: "100%"
+        x: "calc(100% + 100px)"
     },
     enter: {
         x: "0%",
         transition: {duration: 0.8, ease: [0.76, 0, 0.24, 1] }
     },
     exit: {
-        x: "100%",
+        x: "calc(100% + 100px)",
         transition: {duration: 0.8, ease: [0.76, 0, 0.24, 1] }
 
     }
@@ -96,6 +96,7 @@ const OliverNav = () => {
                 <a>LinkedIn</a>
             </div>
         </div>
+        <Curve/>
     </motion.div>
   )
 }

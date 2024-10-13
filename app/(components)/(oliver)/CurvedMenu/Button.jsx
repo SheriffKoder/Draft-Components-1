@@ -12,10 +12,10 @@ const Button = ({isActive, changeState}) => {
         `}>
             <span
             className={`w-full bg-white h-[1px] mb-[5px] transition-all duration-[0.3] ease-linear
-            ${isActive ? "rotate-45 mb-[0px]" : ""}`}></span>
+            ${isActive ? "rotate-45 mb-[-5px]" : ""}`}></span>
             <span 
             className={`w-full bg-white h-[1px] mt-[5px] transition-all duration-[0.3] ease-linear
-            ${isActive ? "rotate-[-45deg] mt-[0px]" : ""}`}></span>
+            ${isActive ? "rotate-[-45deg] mt-[5px]" : ""}`}></span>
         </div>
     </div>
   )
