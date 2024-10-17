@@ -31,7 +31,7 @@ const Curve = () => {
     }
 
   return (
-    <svg className="absolute top-0 left-[-99px] width-[100px] h-full fill-[rgb(41,41,41)] stroke-none">
+    <svg className="z-[-1] absolute top-0 left-[-99px] width-[100px] h-full fill-[rgb(41,41,41)] stroke-none">
         <motion.path d={initialPath}
         variants={pathAnimation} initial="initial" animate="enter" exit="exit">
 

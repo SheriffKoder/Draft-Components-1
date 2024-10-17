@@ -4,7 +4,7 @@ import React, {useState} from 'react'
 import Project from './project';
 import Modal from "./modal";
 
-const Page = () => {
+const GalleryDennis = () => {
 
     const projects = [
         {
@@ -32,8 +32,7 @@ const Page = () => {
     const [modal, setModal] = useState({active: false, index: 0});
 
   return (
-    <main>
-        <div className="flex items-center justify-center h-[100vh]">
+        <section className="flex items-center justify-center h-[100vh]">
             <div className="w-[1000px] flex items-center justify-center flex-col">
                 {
                     // pass the title and setModal to each list item
@@ -48,10 +47,8 @@ const Page = () => {
             </div>
             <Modal modal={modal} projects={projects}/>
 
-        </div>
-
-    </main>
+        </section>
   )
 }
 
-export default Page
+export default GalleryDennis;

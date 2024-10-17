@@ -209,10 +209,10 @@ export const OliverComponents = [
         description: "a div showing images with aligned vertical animation switching, framer-motion for entry/exit scale, gsap mouse track",
         image: "/cardImages/olivier/ProjectGallery.png"
     },
-    // {
-    //     link: "/CurvedMenu",
-    //     title: "Curved side menu (Framer-motion)",
-    //     description: "",
-    //     image: "/cardImages/olivier/CurvedMenu.png"
-    // },
+    {
+        link: "/CurvedMenu",
+        title: "Curved side menu (Framer-motion)",
+        description: "",
+        image: "/cardImages/olivier/CurvedMenu.png"
+    },
 ]

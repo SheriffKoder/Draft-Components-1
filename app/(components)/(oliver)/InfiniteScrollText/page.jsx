@@ -21,7 +21,7 @@ reset
 
 */
 
-const Page = () => {
+const HeroDennis = () => {
 
     const firstText = useRef(null);
     const secondText = useRef(null);
@@ -75,26 +75,26 @@ const Page = () => {
     }
 
   return (
-    <ScrollContext>
-    <main className={`mb-[100vh] h-[100vh] relative overflow-hidden`}>
-        <Image style={{objectFit:"cover"}} fill={true} src="https://wallpapers.com/images/hd/majestic-alpine-peaks-7r3jwi77w5uharbr.webp" alt="image"/>
+    // <ScrollContext>
+    <section className={`h-[100vh] relative overflow-hidden`}>
+        <Image style={{objectFit:"cover"}} fill={true} src="/OliverImages/ProjectGallery/wallpaper3.jpg" alt="image"/>
 
         {/* original -300px */}
         <div className={`absolute top-[calc(100vh-400px)]`}>
             <div ref={slider} className="relative whitespace-nowrap flex">
-                <p ref={firstText} className="m-0 text-white text-[15vw] font-[500]">
-                    Alpine Peaks - 
+                <p ref={firstText} className="m-0 text-white text-[13vw] font-[500]">
+                    The Rock Band - 
                 </p>
-                <p ref={secondText} className="m-0 text-white text-[15vw] font-[500] absolute left-[100%]"> 
-                    Alpine Peaks - 
+                <p ref={secondText} className="m-0 text-white text-[13vw] font-[500] absolute left-[100%]"> 
+                    The Rock Band - 
                 </p>
             </div>
         </div>
 
 
-    </main>
-    </ScrollContext>
+    </section>
+    // </ScrollContext>
   )
 }
 
-export default Page
+export default HeroDennis

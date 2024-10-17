@@ -1,0 +1,91 @@
+.header{
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 0;
+    color: white;
+    padding: 35px;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 300;
+    box-sizing: border-box;
+    align-items: center;
+    
+    .logo{
+        display: flex;
+        cursor: pointer;
+        
+        p{
+            margin: 0px;
+            transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+        }
+        .name{
+            display: flex;
+            position: relative;
+            overflow: hidden;       //
+            white-space: nowrap;    //
+            margin-left: 5px;
+            transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+            p{
+                position: relative;
+                transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+                &:nth-of-type(2){
+                    padding-left: 0.3em;
+                }
+                &:nth-of-type(3){
+                    position: absolute;
+                    left: 105px;
+                    padding-left: 0.3em;
+                }
+            }
+        }
+        &:hover{
+            .copyright{
+                transform: rotate(360deg);
+            }
+            .name{
+                padding-right: 30px;
+                .codeBy{
+                    transform: translateX(-100%);
+                }
+                .firstName{
+                    transform: translateX(-65px); //
+                }
+                .lastName{
+                    transform: translateX(-65px); //
+                }
+            }
+        }
+    }
+    
+    .nav {
+        display: flex;
+
+        .el {
+            display: flex;
+            position: relative;
+            padding: 15px;
+            cursor: pointer;
+
+            .indicator {
+                width: 6px;
+                height: 6px;
+                background-color: rgb(96 165 250);
+                position: absolute;
+                border-radius: 50%;
+                top: 80%;
+                left: 50%;
+                transform: scale(0) translateX(-50%);
+                transition: all 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+
+            }
+
+            &:hover {
+                .indicator {
+                    transform: scale(1) translateX(-50%);
+                }
+            }
+        }
+
+    }
+}

@@ -54,15 +54,15 @@ const OliverNav = () => {
             href: "/"
         },
         {
-            title: "Work",
-            href: "/"
-        },
-        {
             title: "About",
             href: "/"
         },
         {
-            title: "Contact",
+            title: "Albums",
+            href: "/"
+        },
+        {
+            title: "Concerts",
             href: "/"
         },
     ];
@@ -71,10 +71,11 @@ const OliverNav = () => {
     <motion.div 
     variants={menuSlide} animate="enter" exit="exit" initial="initial"
     className='menu fixed top-0 right-0 h-[100vh] bg-[rgb(41,41,41)] text-white'>
-        <div className='body h-full p-[100px] flex flex-col justify-between'>
+        <div className='body h-full flex flex-col justify-between'>
 
-            <div className='nav flex flex-col text-[56px] gap-[12px] mt-[80px] font-[300]'>
-                <div className='text-[rgb(153,153,153)] text-base uppercase border-b border-b-[rgb(153,153,153)] mb-[40px]'>
+            <div className='nav flex flex-col text-[56px] gap-[12px] mt-[80px] font-[300]
+            '>
+                <div className='m-[100px] text-[rgb(153,153,153)] text-base uppercase border-b border-b-[rgb(153,153,153)] mb-[40px]'>
                     <p>Navigation</p>
                 </div>
                 {
@@ -82,18 +83,19 @@ const OliverNav = () => {
                     // custom for the animation of delaying each link
                     links.map((link,index)=>(
                         <motion.div key={link.title} 
+                        className='w-full hover:text-blue-400 px-[100px]'
                         custom={index} variants={slide} animate="enter" exit="exit" initial="initial">
-                            <Link href={link.href}>{link.title}</Link>
+                            <Link className="cursor-pointer " href={link.href}>{link.title}</Link>
                         </motion.div>
                     ))
                 }
             </div>
 
-            <div className='flex justify-between gap-[40px] text-[12px]'>
-                <a>Awwwards</a>
-                <a>Instagram</a>
-                <a>Dribble</a>
-                <a>LinkedIn</a>
+            <div className='flex justify-between gap-[40px] text-[12px] px-[100px] pb-[100px]'>
+                <a className="cursor-pointer hover:text-blue-400">Spotify</a>
+                <a className="cursor-pointer hover:text-blue-400 text-nowrap">Apple Music</a>
+                <a className="cursor-pointer hover:text-blue-400">Youtube</a>
+                <a className="cursor-pointer hover:text-blue-400">Instagram</a>
             </div>
         </div>
         <Curve/>
