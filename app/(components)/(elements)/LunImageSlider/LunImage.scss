@@ -1,0 +1,20 @@
+
+.LunSlider img:not(img:first-child) {
+    display: none;
+}
+
+.LunSlider img {
+    animation-duration: 0.5s;
+    animation-name: fadeIn;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
