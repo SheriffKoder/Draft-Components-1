@@ -6,7 +6,8 @@ import {
   componentsElements,
   componentsGsap,
   componentsBackground,
-  OliverComponents
+  OliverComponents,
+  LunComponents
 } from "@/constants/HomeComponents";
 
 import HomeCardLink from "@/components/home/HomeCardLink";
@@ -87,6 +88,11 @@ export default function Home() {
 
           <h1 className="col-span-full text-2xl font-bold mt-20">Olivier Larose</h1>
           {OliverComponents.map((component) => (
+            <HomeCardLink key={component.title} cmp={component} />
+          ))}
+
+          <h1 className="col-span-full text-2xl font-bold mt-20">LunDev</h1>
+          {LunComponents.map((component) => (
             <HomeCardLink key={component.title} cmp={component} />
           ))}
           

@@ -123,6 +123,12 @@ export const componentsElements = [
         title: "Image picker",
         description: "Custom button to image input and display the image live",
     },
+    
+    {
+        link: "/AppleGradButton",
+        title: "Gradient background border button",
+        description: "Apple (Hello) styled button",
+    },
 ]
 
 
@@ -214,5 +220,13 @@ export const OliverComponents = [
         title: "Curved side menu (Framer-motion)",
         description: "",
         image: "/cardImages/olivier/CurvedMenu.png"
+    },
+]
+
+export const LunComponents = [
+    {
+        link: "/LunImageSlider",
+        title: "Image Slider (CSS/JS)",
+        description: "Simple image slider with fadeIn animation",
     },
 ]
