@@ -41,7 +41,13 @@ export const componentsUI = [
         title: "Smooth Reveal Nav (GSAP)",
         description: "Nav bar that hide on scroll down and (shows on scroll up anywhere) with a smooth transition",
     },
+    {
+        link: "/Form",
+        title: "Form",
+        description: "Default form styling",
+        image: "/cardImages/ui/form.jpg"
 
+    },
     
 ]
 
@@ -81,6 +87,12 @@ export const componentsBackground = [
         link: "/ParallaxBackground02",
         title: "Parallax Hero section (GSAP)",
         description: "Hero section contains multiple images with different parallax speeds, gets hidden by the below section on scroll",
+    },
+    {
+        link: "/HeroBoxOpen",
+        title: "Hero box open",
+        description: "scroll and open the background image",
+        image: "/cardImages/elements/HeroBoxOpen.jpg"
     },
 ]
 
@@ -128,6 +140,14 @@ export const componentsElements = [
         link: "/AppleGradButton",
         title: "Gradient background border button",
         description: "Apple (Hello) styled button",
+        image: "/cardImages/elements/AppleGradButton.jpg"
+
+    },
+    {
+        link: "/ReactCardTilt",
+        title: "React tilt card",
+        description: "Hover and rotate card with depth effect",
+        image: "/cardImages/elements/ReactCardTilt.jpg"
     },
 ]
 
@@ -175,7 +195,7 @@ export const componentsGsap = [
         description: "Boxes display from the bottom on scroll, each with different speed",
     },
     {
-        link: "/ScrollFitText",
+        link: "/ScrollFillText",
         title: "Reading effect",
         description: "Text has color fill that animates with scroll, each line is independent",
     },
@@ -201,6 +221,15 @@ export const componentsGsap = [
     },
 ]
 
+export const componentsGsap2 = [
+    {
+        link: "/ParallaxCardsXY",
+        title: "Parallax Cards x/y axis",
+        description: "scroll up-down get parallax effect",
+        image: "/cardImages/gsap/ParallaxCardsXY.png"
+
+    },
+]
 
 export const OliverComponents = [
     {
@@ -230,3 +259,44 @@ export const LunComponents = [
         description: "Simple image slider with fadeIn animation",
     },
 ]
+
+export const Sliders = [
+    {
+        link: "/ScrollStackCards",
+        title: "Gift cards stacked (CSS)",
+        description: "Cards viewing on scroll one overlaying the other",
+        image: "/cardImages/sliders/ScrollStackCards.jpg"
+    },
+    {
+        link: "/splide",
+        title: "Carousel x-swipe (Splide.js)",
+        description: "Cards auto rotate, loop, open effect, x-direction",
+        image: "/cardImages/sliders/splide.jpg"
+
+    },
+    {
+        link: "/FadeSelectSlider",
+        title: "Image slider w/ Fade and select",
+        description: "Dynamic image slider",
+        image: "/cardImages/sliders/FadeSelectSlider.jpg"
+    },
+    {
+        link: "/ImageCards",
+        title: "Image Cards",
+        description: "Image slider w/ Card effect",
+        image: "/cardImages/sliders/ImageCards.jpg"
+    },
+    {
+        link: "/StackCards",
+        title: "Apple Music Cards",
+        description: "Stack cards",
+        image: "/cardImages/sliders/StackCards.jpg"
+    },
+    {
+        link: "/xCardsSplide",
+        title: "x-Carousel (Swiper)",
+        description: "horizontal slider",
+        image: "/cardImages/sliders/x-Carousel.jpg"
+    },
+]
+

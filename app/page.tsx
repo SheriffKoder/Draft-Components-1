@@ -7,7 +7,8 @@ import {
   componentsGsap,
   componentsBackground,
   OliverComponents,
-  LunComponents
+  LunComponents,
+  Sliders,
 } from "@/constants/HomeComponents";
 
 import HomeCardLink from "@/components/home/HomeCardLink";
@@ -54,7 +55,7 @@ export default function Home() {
         />
       </div>
 
-        <div className="grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-3 lg:text-left gap-4 px-5">
+        <div className="grid text-center vp4:mb-0 vp4:w-full vp4:max-w-5xl vp4:grid-cols-3 vp4:text-left gap-4 px-5">
 
           <h1 className="col-span-full text-2xl font-bold">3D Elements</h1>
           {components3D.map((component) => (
@@ -86,6 +87,11 @@ export default function Home() {
             <HomeCardLink key={component.title} cmp={component} />
           ))}
 
+          <h1 className="col-span-full text-2xl font-bold mt-20">GSAP custom</h1>
+          {componentsGsap.map((component) => (
+            <HomeCardLink key={component.title} cmp={component} />
+          ))}
+
           <h1 className="col-span-full text-2xl font-bold mt-20">Olivier Larose</h1>
           {OliverComponents.map((component) => (
             <HomeCardLink key={component.title} cmp={component} />
@@ -93,6 +99,11 @@ export default function Home() {
 
           <h1 className="col-span-full text-2xl font-bold mt-20">LunDev</h1>
           {LunComponents.map((component) => (
+            <HomeCardLink key={component.title} cmp={component} />
+          ))}
+
+          <h1 className="col-span-full text-2xl font-bold mt-20">Image Sliders</h1>
+          {Sliders.map((component) => (
             <HomeCardLink key={component.title} cmp={component} />
           ))}
           

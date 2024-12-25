@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "framer-motion": "^11.11.1",
     "gsap": "^3.12.5",
     "lenis": "^1.1.13",
@@ -19,11 +21,15 @@
     "react": "^18",
     "react-dom": "^18",
     "react-lottie": "^1.2.4",
+    "react-parallax-tilt": "^1.7.268",
     "sass": "^1.79.6",
+    "scrollscene": "^0.0.24",
     "smooth-scrollbar": "^8.8.4",
     "tailwindcss-autofill": "^1.0.2",
     "tailwindcss-shadow-fill": "^1.0.1",
-    "tailwindcss-text-fill": "^0.2.0"
+    "tailwindcss-text-fill": "^0.2.0",
+    "swiper": "^9.0.3"
+
   },
   "devDependencies": {
     "@types/node": "^20",

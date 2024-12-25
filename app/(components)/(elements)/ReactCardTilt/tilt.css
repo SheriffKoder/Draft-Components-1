@@ -1,0 +1,33 @@
+.glass_bg {
+    background: #a58964af;
+    /* border-radius: 16px; */
+    /* box-shadow: 0 4px 30px rgba(255, 0, 0, 0.1); */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid #a589648a;
+  }
+  
+  #hero_bg {
+    background-color: rgba(165, 157, 143, 0.89);
+    /* background-blend-mode:screen; */
+  }
+  /* c4bbad */
+  .tilt-parallax-effect {
+    transform-style: preserve-3d;
+    
+  
+  }
+  
+  .tilt-inner-element {
+    transform: translateZ(60px);
+  }
+  
+  .tilt-inner-element2 {
+    transform: translateZ(120px);
+  }
+  
+
+  .accent1-dark-bg-grad {
+    background: rgb(194,175,150);
+  background: linear-gradient(170deg, rgba(194,175,150,1) 0%, rgba(155,121,93,1) 100%);
+  }

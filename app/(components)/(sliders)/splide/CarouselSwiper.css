@@ -1,0 +1,78 @@
+
+/* ///////////////////////////////////////////////////////////////////////// */
+/* carousel - our services */
+.splideCard .splideContent {
+    opacity: 0;
+    /* transform: translateY(20px); */
+    /* position: absolute; */
+    height: 0px;
+  }
+  
+  .splideCard:hover  .splideContent{
+    /* display: block; */
+    opacity: 1;
+    /* position: relative; */
+    height: 150px;
+    /* transform: translateY(0px); */
+  }
+  
+  /* .splideCard .splideTitle {
+    transform: translateY(20px);
+  }
+  
+  .splideCard:hover  .splideTitle{
+    transform: translateY(0px);
+  } */
+  
+  
+  .splideCard {
+    filter: brightness(1);
+  
+  }
+  
+  .splideCard:hover{
+    filter: brightness(1.15);
+    /* transform: translateY(-100px); */
+    
+  }
+  
+  
+  .splide {
+    padding: 0;
+  }
+  
+  button.splide__arrow {
+    background-color: white;
+    opacity: 1;
+  }
+  
+  button.splide__arrow svg {
+    fill: 191e3e;
+  }
+  
+
+  .swipe_rotate {
+    animation-duration: 7s;
+    animation-name: rotateBack;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+  }
+  
+  @keyframes rotateBack {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    15%{
+      transform: rotate(30deg);
+    }
+    30% { 
+      transform: rotate(-30deg);
+    }
+    50% {
+      transform: rotate(0deg);
+  
+    }
+  }
+  

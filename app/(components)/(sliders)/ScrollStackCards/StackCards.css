@@ -1,0 +1,110 @@
+
+
+/* ///////////////////////////////////////////////////////////////////////// */
+/* stacked cards - occassions */
+:root {
+	--cards: 8;
+	--cardHeight: 92vh;
+	--cardTopPadding: 80px;
+	--cardMargin: 4vw;
+}
+
+.StackContainer {
+	width: 100%;
+	margin: 0 auto;
+
+}
+
+#cards {
+	list-style: none;
+	padding-left: 0;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(var(--cards), var(--cardHeight));
+	gap: var(--cardMargin);
+	/* padding-bottom: calc(var(--cards) * var(--cardTopPadding)); */
+	/* margin-bottom: var(--cardMargin); */
+}
+
+#card1 {
+	--index: 1;
+  --mx: 50px
+}
+#card2 {
+	--index: 1.1;
+  --mx: 38px
+}
+#card3 {
+	--index: 1.2;
+  --mx: 28px
+}
+#card4 {
+	--index: 1.3;
+  --mx: 18px
+}
+#card5 {
+	--index: 1.4;
+  --mx: 8px
+}
+#card6 {
+	--index: 1.5;
+  --mx: 0px
+}
+#card7 {
+	--index: 1.6;
+  --mx: 0px
+}
+#card8 {
+	--index: 1.7;
+  --mx: 0px
+}
+
+.card {
+	position: sticky;
+	top: 0;
+	padding-top: calc(var(--index) * var(--cardTopPadding));
+  margin: 0 ;
+  
+}
+
+.card img {
+  object-fit: cover;
+}
+
+#card1 .card-body {
+	background-color: #52B2CF;
+}
+#card2 .card-body {
+	/* background-color: #7EC4CF; */
+	background-color: #E5A36F;
+}
+#card3 .card-body {
+	background-color: #9CADCE;
+}
+#card4 .card-body {
+	background-color: #D4AFB9;
+}
+#card5 .card-body {
+	background-color: #52B2CF;
+}
+#card6 .card-body {
+	/* background-color: #7EC4CF; */
+	background-color: #E5A36F;
+}
+
+.card-body {
+	box-sizing: border-box;
+	padding: 30px;
+	border-radius: 20px;
+	/* box-shadow: 0 0 30px 0 rgba(0,0,0,0.3); */
+	height: var(--cardHeight);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.5s;
+}
+
+.StackCardsContent {
+
+}
+

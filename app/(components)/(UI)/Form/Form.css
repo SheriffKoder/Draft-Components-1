@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap');
+
+
+.f_rale {
+  @apply font-['Raleway']
+}
+
+
+.box_shadow_light {
+    -webkit-box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px -1px 18px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .f_rale {
+    @apply p-1
+  }
+
+  .accent1-bg {
+    @apply bg-[#A58964]
+  }
+
+  .accent2-bg {
+    @apply bg-[#191e3e]
+  }
+
+  .trans1 {
+    @apply duration-150 ease-linear transition-all
+  }
+/* ///////////////////////////////////////////////////////////////////////// */
+/* Form */
+
+Form {
+    color: rgb(31, 31, 31);
+}
+.FormInput, .FormInput2 {
+    @apply
+    focus:outline-[#A58964]
+    caret-[#387ca4]
+    placeholder-[#6464645b]
+    text-[#000000]
+  
+    bg-[#f8f8f8]
+    focus:bg-[#e7e7e7]
+    px-2
+    h-[2.25rem]
+    border
+    rounded-[3px]
+    focus:border-[#A58964]
+    border-[#d1bca0]
+    w-full
+  }
+  /* border-black border */
+  .form_section {
+  @apply flex flex-col gap-[2rem]
+   rounded-[10px] p-[1rem] bg-[#ffffff] box_shadow_light w-full max-w-[550px] mx-auto
+  }
+  
+  .form_area legend {
+    @apply mb-[0.5rem]
+  }
+  .form_area {
+    @apply flex flex-col gap-2 vp3:px-[0.5rem]
+  }
+  
+  .form_area_x3 {
+    @apply flex vp3:flex-row gap-2 vp3:gap-1
+  }
+  .form_radio_row {
+    @apply flex flex-row gap-2 flex-wrap mt-[0rem] mb-[1rem]
+  }
+  
+  .FormInput2 {
+    @apply vp3:w-[30ppx]
+  }
+  
+  .form_row {
+    @apply flex flex-col gap-2 vp3:flex-row
+  }
+  .FormLabel {
+  @apply f_rale text-[min(calc(0.75rem+1.5vw),20px)] font-normal
+  }
+  
+  .form_section h2 {
+    @apply f_rale text-[min(calc(0.75rem+2vw),35px)] text-center
+    font-semibold accent1-bg text-white px-[1rem] py-[0.5rem] rounded-[5px]
+  }
+  
+  .form_section:focus-within h2 {
+    @apply bg-[#191e3e] trans1
+  }
+  
+  #join_form button[type=submit] {
+    @apply accent1-bg px-2 py-2 w-[300px] rounded-full mx-auto text-white
+    focus:outline-[#A58964] hover:outline-[#A58964] outline-offset-2
+    focus:bg-[#9b795d] hover:bg-[#9b795d]
+  }
+  
+  #join_form textarea {
+    @apply h-[100px]
+  }
+  
+  input[type=checkbox], input[type=radio] {
+    accent-color: #A58964;
+  }
+  
+  /* .form_section:focus-within input[type=checkbox],  .form_section:focus-within input[type=radio] {
+    accent-color: #191e3e;
+  } */
+  
+  
+  .FormLabel2 {
+    @apply pl-0
+  }
+  
+  /* //////////////////////////////////////////////////////////////////////////// */
+  /* // Loading spinner Form */
+  .MrazloaderContainer {
+    /* width: 7rem; */
+    /* height: 7rem; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #5849c91f; */
+    /* border: 2px solid #382e82be; */
+    /* border-radius: 12px; */
+    /* backdrop-filter: blur(2px); */
+    /* -webkit-backdrop-filter: blur(2px); */
+  }
+  
+  .Mrazloader-2 {
+    height: 1.5rem;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 0.3rem solid;
+    border-color: #ffffff #f7f7f760;
+    animation: l1 1s infinite;
+  }
+  
+  /* rotate 0.5turn */
+  @keyframes l1 {to{transform: rotate(.5turn)}}
+  

@@ -35,7 +35,7 @@ export default function ScrollContext ({children}) {
       }
     }
 
-  },[lenisRef, rafState]);
+  },[]);
 
   return (
     <SmoothScrollerContext.Provider value={lenisRef}>
