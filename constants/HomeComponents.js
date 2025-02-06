@@ -48,6 +48,12 @@ export const componentsUI = [
         image: "/cardImages/ui/form.jpg"
 
     },
+    {
+        link: "/collapsible-card",
+        title: "collapsible card",
+        description: "Animated/Transition element height with Grid CSS",
+        image: "/cardImages/elements/collapsible-card.jpg"
+    },
     
 ]
 
@@ -116,6 +122,11 @@ export const componentsElements = [
         description: "An animation for numbers to increase on view (framer-motion)",
     },
     {
+        link: "/input-search",
+        title: "Increasing numbers (clean)",
+        description: "An animation for numbers to increase on view",
+    },
+    {
         link: "/circularProgress",
         title: "Circular Progress",
         description: "Circle progress bar animation, gradient color and displays a graphic on completion",
@@ -131,12 +142,6 @@ export const componentsElements = [
         description: "x",
     },
     {
-        link: "/ImagePicker",
-        title: "Image picker",
-        description: "Custom button to image input and display the image live",
-    },
-    
-    {
         link: "/AppleGradButton",
         title: "Gradient background border button",
         description: "Apple (Hello) styled button",
@@ -149,8 +154,66 @@ export const componentsElements = [
         description: "Hover and rotate card with depth effect",
         image: "/cardImages/elements/ReactCardTilt.jpg"
     },
+    {
+        link: "/FlipClock",
+        title: "Countdown HTC style",
+        description: "count down or incease number cards",
+        image: "/cardImages/elements/FlipClock.jpg"
+    },
+    {
+        link: "/FlipClock2",
+        title: "Countdown HTC style v2",
+        description: "count down number cards v2",
+        image: "/cardImages/elements/FlipClock.jpg"
+    },
+    {
+        link: "/FlipClock3",
+        title: "Countdown HTC style v3",
+        description: "HTML examples",
+        image: "/cardImages/elements/FlipClock.jpg"
+    },
+    {
+        link: "/IncNumbers2",
+        title: "rolling numbers v2",
+        description: "from 0's to many numbers y-rotation increasing numbers",
+        image: "/cardImages/elements/IncNumbers2.jpg"
+    },
+    {
+        link: "/IncNumbers3",
+        title: "rolling numbers v3",
+        description: "from 0's to many numbers y-rotation increasing numbers",
+        image: "/cardImages/elements/IncNumbers3.jpg"
+    },
+    {
+        link: "/IncNumbers4",
+        title: "rolling numbers v4 (css/js)",
+        description: "from 0's to many numbers y-rotation increasing numbers",
+        image: "/cardImages/elements/IncNumbers3.jpg"
+    },
+
+
 ]
 
+export const componentsFunctionalities= [
+    {
+        link: "/ImagePicker",
+        title: "Image picker",
+        description: "Custom button to image input and display the image live",
+    },
+    {
+        link: "/input-search",
+        title: "Input search",
+        description: "Have data? Search input, clear",
+        image: "/cardImages/elements/input-search.jpg"
+    },
+    {
+        link: "/zod",
+        title: "Zod",
+        description: "Zod client and server side validation",
+        image: "/cardImages/elements/zod.jpg"
+    },
+
+]
 
 export const componentsGsap = [
     {
@@ -258,6 +321,16 @@ export const LunComponents = [
         title: "Image Slider (CSS/JS)",
         description: "Simple image slider with fadeIn animation",
     },
+    {
+        link: "/HoverMultiCards",
+        title: "Multi cards hover fade (CSS)",
+        description: "Hover this, fade the before orderly",
+    },
+    {
+        link: "/AnimatingText",
+        title: "Animating text (CSS)",
+        description: "SVG text image border animation",
+    },
 ]
 
 export const Sliders = [
@@ -297,6 +370,18 @@ export const Sliders = [
         title: "x-Carousel (Swiper)",
         description: "horizontal slider",
         image: "/cardImages/sliders/x-Carousel.jpg"
+    },
+    {
+        link: "/slider2",
+        title: "new **",
+        description: "horizontal slider",
+        image: "/cardImages/sliders/x-Carousel.jpg"
+    },
+    {
+        link: "/Testimonials",
+        title: "Testimonials Cards",
+        description: "horizontal slider",
+        image: "/cardImages/sliders/TestimonialsCards.jpg"
     },
 ]
 

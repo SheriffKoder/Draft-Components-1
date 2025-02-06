@@ -1,0 +1,51 @@
+.item {
+  @apply transition-all h-[300px] w-[150px] duration-300 ease-in
+}
+
+/* // applicable to 4 divs */
+
+.list .item:hover {
+    filter: brightness(0.6);
+    /* transform: translateY(150px) rotateY(40deg); */
+}
+
+/* // next element #1 */
+.list .item:hover + * {
+    filter: brightness(0.4);
+    /* transform: translateY(70px) rotateY(20deg); */
+}
+
+/* // before element #1 */
+.list .item:has(+ *:hover) {
+    filter: brightness(0.4);
+    /* transform: translateY(70px) rotateY(20deg); */
+}
+
+/* // and the next #2 */
+.list .item:hover + *  + * {
+    filter: brightness(0.2);
+    /* transform: translateY(30px) rotateY(10deg); */
+}
+
+
+/* // and the before #2 */
+.list .item:has(+ * + *:hover) {
+    filter: brightness(0.2);
+    /* transform: translateY(70px) rotateY(20deg); */
+}
+
+/* // and and the next #3 */
+.list .item:hover + * + *  + * {
+  filter: brightness(0.2);
+  /* transform: translateY(30px) rotateY(10deg); */
+}
+
+/* // and and the before #3 */
+.list .item:has(+ * + * + *:hover) {
+  filter: brightness(0.1);
+  /* transform: translateY(70px) rotateY(20deg); */
+}
+
+
+
+

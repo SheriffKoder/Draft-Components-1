@@ -1,21 +1,38 @@
 
 /* ///////////////////////////////////////////////////////////////////////// */
 /* carousel - our services */
-.splideCard .splideContent {
-    opacity: 0;
-    /* transform: translateY(20px); */
-    /* position: absolute; */
-    height: 0px;
+
+/* text hover effect */
+
+/* splideCard */
+/* relative flex items-end */
+.splideContentDesc {
+  position: absolute;
+  bottom: 3rem;
+  height: auto;
+  transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+  transition: all 0.4s ease-in 0s;
+  -webkit-transition: all 0.4s ease-in 0s;
+}
+
+.splideCard:hover .splideContentDesc {
+  bottom: 1rem;
+  transform: translateY(0%);
+  -webkit-transform: translateY(0%);
+}
+
+.splideCard .splideContentDesc .splideContent {
+  opacity: 0;
+  transition: all 0.4s ease-in-out 0;
+  -webkit-transition: all 0.4s ease-in-out 0;
+
   }
   
-  .splideCard:hover  .splideContent{
-    /* display: block; */
+  .splideCard:hover .splideContentDesc .splideContent{
     opacity: 1;
-    /* position: relative; */
-    height: 150px;
-    /* transform: translateY(0px); */
   }
-  
+
   /* .splideCard .splideTitle {
     transform: translateY(20px);
   }

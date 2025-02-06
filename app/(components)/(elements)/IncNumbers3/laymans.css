@@ -1,0 +1,29 @@
+.rolling-number-container {
+    display: inline-flex;
+    align-items: baseline;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .millions,
+  .thousands {
+    margin-right: 0.2em; /* Small space between groups */
+    transition: all 0.2s linear;
+  }
+
+  .rollingComma {
+    /* transition: all s linear; */
+    opacity: 0;
+    transform: translateY(1rem);
+    animation: 0.3s fadeIn ease-in forwards;
+    margin-right: 4px;
+
+  }
+
+  @keyframes fadeIn {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  

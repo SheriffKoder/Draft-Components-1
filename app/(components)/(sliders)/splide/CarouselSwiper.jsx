@@ -7,6 +7,7 @@ import "@splidejs/splide/dist/css/splide.min.css";
 
 // https://levelup.gitconnected.com/implementing-an-infinite-autoplay-carousel-in-react-with-splide-cac6355ba435
 // https://splidejs.com/guides/options/#wheel
+// https://codepen.io/yudizsolutions/pen/wvzrPoj inspiration
 
 import "./CarouselSwiper.css"
 
@@ -15,7 +16,7 @@ function CarouselSwiper() {
     const sectionFive_cards = [
         {
             header: "Banquet Server",
-            paragraph: "Friendly and professional servers skilled in delivering exceptional dining experiences for weddings, corporate events, and private gatherings.",
+            paragraph: "Friendly and professional servers.",
             image: "./XCarouselSwiper/1.png"
     
         },
@@ -42,7 +43,7 @@ function CarouselSwiper() {
     
         {
             header: "Concession Stand Worker",
-            paragraph: "Reliable team members adept at serving food, drinks, and handling transactions at stadiums, fairs, and other event venues.",
+            paragraph: "Reliable team members adept at serving food, drinks, and handling transactions.",
             image: "./XCarouselSwiper/2.png"
     
         },
@@ -95,19 +96,19 @@ function CarouselSwiper() {
                         vp4:w-[min(500px,40vw)] vp4:h-[min(600px,55vw)] vp5:h-[min(600px,45vw)] vp6:h-[min(600px,37vw)]
                         vp4:hover:w-[min(550px,42vw)] vp4:hover:h-[min(600px,55vw)] vp5:hover:h-[min(600px,45vw)] vp6:hover:h-[min(600px,37vw)]
                         transition-all duration-500 ease-out border
-                         
+                         relative flex items-end
                         splideCard text-white'
                         style={{
                             background: "#00000060",
                             background: `linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 61%, rgba(255,255,255,0) 100%), url(${card.image})`,
-                            backgroundPosition: "center",
+                            backgroundPosition: "center left",
                             backgroundRepeat: "no-repeat",
-                            backgroundSize: "cover",
+                            backgroundSize: "42vw",
                           }}
                         >
 
                             <div className="max-w-[40vw] vp4:max-w-[min(500px,40vw)]
-                            flex flex-col items-start justify-end h-full">
+                            flex flex-col items-start justify-end h-full splideContentDesc">
                                 <h3 className='heading2 splideTitle w-[30vw] max-w-[400px]
                                 transition-all duration-500 ease-out'>
                                     {/* <span className='text-sm vp4:text-xl mr-[0.5rem]'>{index+1}</span> */}

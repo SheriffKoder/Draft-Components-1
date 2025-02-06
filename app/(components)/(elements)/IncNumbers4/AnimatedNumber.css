@@ -1,0 +1,72 @@
+.animated-number {
+    display: flex;
+    gap: 0.25rem;
+    font-family: arial, sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+  }
+  
+  .millions-section,
+  .thousands-section,
+  .last-three-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .char,
+  .millions,
+  .thousands,
+  .last-three-digits {
+    display: inline-block;
+    width: auto;
+    position: relative;
+    overflow: hidden; /* Hide extra digits */
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(10px); /* Start slightly below */
+    transition: opacity 0.5s linear, transform 0.5s linear; /* Smooth fade-in */
+  }
+  
+  .char.fade-in,
+ 
+  .last-three-digits.fade-in {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Return to original position */
+  }
+  
+  .comma {
+    color: #e6e6e6;
+    font-size: 2rem;
+    opacity: 1; /* Always visible */
+  }
+  
+  .digit-container {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    height: 1em; /* Restrict to one digit height */
+    transform: translateY(0);
+    transition: transform var(--roll-duration, 1s) ease-in-out;
+  }
+  
+  .digit {
+    display: block;
+    height: 1em;
+  }
+  
+.thousands, .millions {
+    /* transition: all s linear; */
+    opacity: 0;
+    transform: translateY(1rem);
+    animation: 0.2s fadeIn ease-in forwards;
+    /* margin-right: 4px; */
+
+  }
+
+  @keyframes fadeIn {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  

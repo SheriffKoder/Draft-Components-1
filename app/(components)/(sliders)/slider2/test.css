@@ -1,0 +1,67 @@
+  
+
+
+
+
+
+
+
+
+  /* Card container */
+  .card {
+    width: 300px; /* Adjust card width */
+    height: 200px; /* Adjust card height */
+    position: relative;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    background: #f4f4f4; /* Background color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Optional: add scale effect on hover */
+  }
+  
+  /* Add hover effect on the card */
+  .card:hover {
+
+  }
+  
+  /* Content container */
+  .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #fff; /* Text color */
+    padding: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Header style */
+  .header {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth animation */
+  }
+  
+  /* Paragraph style (initially hidden) */
+  .paragraph {
+    margin: 10px 0 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0; /* Hide initially */
+    transform: translateY(20px); /* Push paragraph down */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .card:hover .content .paragraph {
+    opacity: 1; /* Show paragraph */
+    transform: translateY(0); /* Move paragraph into view */
+  }
+  
+  .card:hover .content .header {
+    transform: translateY(-20px); /* Move header up */
+  }
+  

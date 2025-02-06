@@ -1,0 +1,26 @@
+.counter {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ff0000; /* YouTube-like color */
+    font-family: Arial, sans-serif;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .counter span {
+    display: inline-block;
+    animation: pop 0.3s ease-out;
+  }
+  
+  /* Keyframe Animation */
+  @keyframes pop {
+    0% {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
