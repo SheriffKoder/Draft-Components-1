@@ -9,7 +9,8 @@ import {
   OliverComponents,
   LunComponents,
   Sliders,
-  componentsFunctionalities
+  componentsFunctionalities,
+  FramerMotion
 } from "@/constants/HomeComponents";
 
 import HomeCardLink from "@/components/home/HomeCardLink";
@@ -85,6 +86,11 @@ export default function Home() {
 
           <h1 className="col-span-full text-2xl font-bold mt-20">Functionalities</h1>
           {componentsFunctionalities.map((component) => (
+            <HomeCardLink key={component.title} cmp={component} />
+          ))}
+
+          <h1 className="col-span-full text-2xl font-bold mt-20">Framer Motion</h1>
+          {FramerMotion.map((component) => (
             <HomeCardLink key={component.title} cmp={component} />
           ))}
 

@@ -190,6 +190,24 @@ export const componentsElements = [
         description: "from 0's to many numbers y-rotation increasing numbers",
         image: "/cardImages/elements/IncNumbers3.jpg"
     },
+    {
+        link: "/tooltip1",
+        title: "Tooltip 1",
+        description: "Have a component want to show a tooltip? place this inside.",
+        image: "/cardImages/elements/IncNumbers3.jpg"
+    },
+    {
+        link: "/tooltip2",
+        title: "Tooltip 2",
+        description: "Have a component want to show a tooltip? place this inside.",
+        image: "/cardImages/elements/IncNumbers3.jpg"
+    },
+    {
+        link: "/highlight-text",
+        title: "Highlight text",
+        description: "Have text want to highlight a word? in a search maybe? pass the text here",
+        image: "/cardImages/elements/IncNumbers3.jpg"
+    },
 
 
 ]
@@ -212,7 +230,22 @@ export const componentsFunctionalities= [
         description: "Zod client and server side validation",
         image: "/cardImages/elements/zod.jpg"
     },
+    {
+        link: "/LogSearch2",
+        title: "Input Search (simple)",
+        description: "Have data? Search input, clear (simple)",
+        image: "/cardImages/elements/input-search.jpg"
+    },
 
+]
+
+export const FramerMotion = [
+    {
+        link: "/FramerSlider",
+        title: "Modal Slider",
+        description: "Framer motion modal slider",
+        image: "/cardImages/elements/input-search.jpg"
+    },
 ]
 
 export const componentsGsap = [
