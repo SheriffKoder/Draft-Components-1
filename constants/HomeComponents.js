@@ -54,7 +54,18 @@ export const componentsUI = [
         description: "Animated/Transition element height with Grid CSS",
         image: "/cardImages/elements/collapsible-card.jpg"
     },
-    
+    {
+        link: "/BottomToast",
+        title: "Bottom Toast",
+        description: "Bottom toast with circular animation",
+        image: "/cardImages/UI/BottomToast.jpg"
+    },
+    {
+        link: "/ModalTips",
+        title: "Modal Tips",
+        description: "Modal tips with fade in/out animation",
+        image: "/cardImages/UI/ModalTips.jpg"
+    },
 ]
 
 
@@ -194,21 +205,38 @@ export const componentsElements = [
         link: "/tooltip1",
         title: "Tooltip 1",
         description: "Have a component want to show a tooltip? place this inside.",
-        image: "/cardImages/elements/IncNumbers3.jpg"
+        image: "/cardImages/elements/tooltip.jpg"
     },
     {
         link: "/tooltip2",
         title: "Tooltip 2",
         description: "Have a component want to show a tooltip? place this inside.",
-        image: "/cardImages/elements/IncNumbers3.jpg"
+        image: "/cardImages/elements/tooltip.jpg"
     },
     {
         link: "/highlight-text",
         title: "Highlight text",
         description: "Have text want to highlight a word? in a search maybe? pass the text here",
-        image: "/cardImages/elements/IncNumbers3.jpg"
+        image: "/cardImages/elements/highlight.jpg"
     },
-
+    {
+        link: "/GradientButtonTextAnim",
+        title: "Gradient Button Text Anim",
+        description: "Gradient text through text of button",
+        image: "/cardImages/elements/GradientButtonTextAnim.jpg"
+    },
+    {
+        link: "/RotatingCards",
+        title: "Rotating Cards",
+        description: "Rotating cards with 3D effect and rotating borders",
+        image: "/cardImages/elements/RotatingCards.jpg"
+    },
+    {
+        link: "/FadeUpText",
+        title: "Fade Up Text",
+        description: "Alternate fade up text animation",
+        image: "/cardImages/elements/FadeUpText.jpg"
+    },
 
 ]
 
@@ -217,6 +245,7 @@ export const componentsFunctionalities= [
         link: "/ImagePicker",
         title: "Image picker",
         description: "Custom button to image input and display the image live",
+        image: "/cardImages/elements/picker.jpg"
     },
     {
         link: "/input-search",
