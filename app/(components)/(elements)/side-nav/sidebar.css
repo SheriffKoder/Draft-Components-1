@@ -1,0 +1,79 @@
+/* ///////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////// */
+/* side bar logo animation on link click */
+
+.repeatcompanyLogoAnim {
+    animation: companyLogo_rotate 0.75s ease-out alternate;
+  }
+  
+  @keyframes companyLogo_rotate {
+    0% {
+      scale: 1;
+      transform: rotate(0deg);
+    }
+    50% { 
+      transform: rotate(3deg);
+      scale: 0.95;
+      opacity: 0.7;
+    }
+    100% {
+      scale: 1;
+      transform: rotate(0deg);
+    }
+  }
+  
+  
+  
+
+  
+  /* ///////////////////////////////////////////////////////////////////// */
+  /* ///////////////////////////////////////////////////////////////////// */
+  /* side nav bar tool tip css */
+  
+  .tooltip { 
+    width: 120px;
+    background: var(--primary);
+    color: var(--background);
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+    border-radius: 6px;
+    top: calc(100% + 11px);
+    left: 50%;
+    transform: translate-x(-50%);
+    opacity: 0;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .tooltip-box {
+    /* position: relative */
+  }
+  
+  .triangle { 
+    border-width: 0 10px 10px;
+    border-color: transparent;
+    border-bottom-color: var(--primary);
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    /* transform: translateY(-50%); */
+  }
+  
+  .toolbar-container {
+    letter-spacing: 1px;
+  }
+  
+  .sidebarLink-container:hover .toolbar-container {
+    /* display: flex; */
+    /* opacity: 1; */
+    transform: translateX(0);
+  }
+        
+  .sidebarLink-container:hover .toolbar-container .tooltip-box .tooltip {
+    opacity: 1;
+    transition: all 0.3s linear;
+  
+  }
+
+  .trans1 {
+    transition: all 0.3s ease-in-out;
+  }

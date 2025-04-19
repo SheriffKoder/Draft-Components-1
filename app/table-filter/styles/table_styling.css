@@ -1,0 +1,226 @@
+/* Color Variables */
+:root {
+  --sgrey: #e0e0e0;  /* Used for borders */
+  --sgrey1: #f5f5f5; /* Used for backgrounds */
+  --primary: #00a896; /* Used for active text color */
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* Table */
+/*
+Index:
+1. Header cell styling - horizontal and vertical surrounding space for header cells - border bottom
+2. Layout and unseparation between row cells
+3. Sticky header
+4. spacing between rows
+5. Row background
+6. Row div
+  6.a first last
+  6.b middle
+
+
+
+*/
+
+#test-table thead {
+    background-color: var(--sgrey1);
+}
+
+#test-table thead tr th {
+    color: black;
+}
+
+#test-table tbody tr td {
+    color: black;
+}
+#test-table {
+    background-color: white;
+}
+
+
+/* Base text styling for table content - sets font weight for better readability */
+.text_table {
+    @apply font-medium
+}
+
+/* Text styling for table headers - slightly transparent for visual hierarchy */
+.text_table_header {
+    @apply font-normal opacity-[0.8]
+}
+
+/* Adjusts the top margin of the table to align with other elements */
+#test-table {
+ margin-top: -5px;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+/* Header cell styling - horizontal and vertical surrounding space for header cells - border bottom */
+#test-table thead tr th {
+    border-bottom: 1px solid var(--sgrey);
+    padding: 20px 10px; /*  */
+}
+
+/* Special styling for first and last header cells - adds extra padding on the left */
+#test-table thead tr th:first-child, #test-table thead tr th:last-child {
+    /* border-left: 1px solid var(--sgrey);     */
+    /* border-top-left-radius: 14px; */
+    padding-left: 0px;
+}
+
+
+/* Row height control - sets minimal height and prevents text wrapping - avoids col separation in rows */
+#test-table td, #test-table tr {
+    height: 1em;
+    white-space: nowrap;
+    padding: 0px 0;
+    /* border: 1px solid; */
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* Layout and unseparation between row cells */
+/* Table layout control - ensures all columns have equal width and no cell spacing */
+#test-table {
+    table-layout: fixed;
+    border-spacing: 0px 0px;
+}
+
+/* Middle cells in each row - removes left and right borders or separation */
+#test-table tr td:not(:first-child, :last-child) {
+  border-left: 0px;
+  border-right: 0px;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* Sticky header implementation - makes the header stick to the top when scrolling */
+#test-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Sticky header implementation - adds visual separation with shadow when scrolling */
+#test-table thead tr th {
+    border-bottom: 1px solid var(--sgrey);
+    padding-right: 16px;
+    /* Add box-shadow for separation effect when scrolling */
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
+}
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* Data row vertical spacing */
+
+/* Row border spacing - sets the space between rows */
+#test-table {
+    border-collapse: separate;
+    border-spacing: 0 5px; /* this will allow a space between header and first row */
+}
+
+/* Cell content padding - adds vertical padding to cell  (text) */
+#test-table tr td div {
+  padding: 2px 0px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ////// tr td :: are the main row cells ////////////////////////////////////////////*/
+
+/* Background without x-padding */
+/* Cell border styling - adds transparent borders with transition effect */
+#test-table tr td {
+    border: 1px solid transparent;
+    transition: all ease 0.3s;
+}
+
+/* First cell in each row - adds background rounded corners on the left side */
+#test-table tr td:first-child {
+    border-right: 0px;
+    /* border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; */
+}
+
+/* Last cell in each row - adds rounded corners on the right side*/
+#test-table tr td:last-child {
+    border-left: 0px;
+    /* border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px; */
+}
+
+/* Hover effect: row background background color (this one not have x-padding*/
+#test-table tr:hover td {
+    border-color: transparent;
+    background-color: rgba(230, 7, 7, 0);
+    border-right: 0px;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* td div styling, individual background, text color, flexible margin and padding */
+
+/* First Last cell's divs ////////////////////////////////////////////////////////////////////////// */
+
+
+/* (Active) Class row styling - changes background color */
+#test-table tr.active td:first-child div, #test-table tr.active td:last-child div {
+    background-color: #E9FFFC;
+}
+
+/* (Active) row first cell - changes text color */
+#test-table tr.active td:first-child div {
+    color: var(--primary);
+}
+
+/* (Hover) effect for first and last cells - changes background color */
+#test-table tr:hover td:first-child div, #test-table tr:hover td:last-child div {
+    /* color: var(--primary); */
+    background-color: var(--sgrey1);
+}
+
+/* First cell content styling - adds (margin), padding and rounded corners */
+#test-table tr td:first-child div {
+    margin-left: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* Last cell content styling - adds (margin), padding and rounded corners */
+#test-table tr td:last-child div {
+    margin-right: 10px;
+    /* padding-right: 20px; */
+    padding-left: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+/* //// Middle cells ////////////////////////////////////////////////////////////////////////////////// */
+
+/* (Active) row middle cells styling - changes background color */
+#test-table tr.active td:not(:first-child, :last-child) div {
+    background-color: #E9FFFC;
+    border-color: transparent;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+/* (Hover) effect for middle cells - changes background color */
+#test-table tr:hover td:not(:first-child, :last-child) div {
+    background-color: var(--sgrey1);
+    border-color: transparent;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+/* Transition effect for all interactive states - adds smooth animation */
+#test-table tr.active td:not(:first-child, :last-child) div,
+#test-table tr:hover td:not(:first-child, :last-child) div,
+#test-table tr:hover td:first-child div, #test-table tr:hover td:last-child div,
+#test-table tr.active td:first-child div, #test-table tr.active td:last-child div
+ {
+    transition: all 0.2s ease-in;
+}

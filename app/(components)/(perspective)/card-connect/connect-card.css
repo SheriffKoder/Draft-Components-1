@@ -1,0 +1,71 @@
+
+
+.floating-left-static {
+    transform: perspective(800px) rotateY(-0deg) rotateX(7deg);
+    position: relative;
+  }
+    
+  
+  .servicesCard {
+    @apply w-[250px] h-[250px] p-6 rounded-lg shadow-md transition-opacity duration-500
+    bg-[rgba(255,255,255,0.07)] backdrop-blur-lg
+    border border-[rgba(255,255,255,0.1)] cursor-pointer
+  }
+  
+  
+    /* Service Cards Styling */
+  .servicesCard {
+    @apply w-[250px] h-[250px] p-6 border rounded-lg shadow-md transition-colors duration-[1500ms] ease-in-out;
+  }
+  
+  /* Activated classes */
+  .servicesCardActivated {
+    @apply border-accent shadow-accent;
+  }
+  
+  .text-accent {
+    @apply text-[#17D9FF];
+  }
+  
+  .shadow-accent {
+    @apply shadow-[0_4px_20px_rgba(54,163,228,0.3)];
+  }
+  
+  .bg-accent {
+    @apply bg-[#36a3e4];
+  }
+  
+  .border-accent {
+    @apply border-[#36a3e4];
+  }
+  
+  /* Text classes */
+  .servicesCard p {
+    @apply text-white/50
+  }
+  
+  .cardHeading {
+    @apply text-2xl font-bold mb-4 transition-colors duration-500 ease-in-out;
+  }
+  
+  /* Perspective effect */
+  .servicesCard {
+    @apply p-6 border rounded-lg shadow-md transition-all duration-300 ease-in-out;
+    transform: perspective(800px) rotateX(0) rotateY(0) translateZ(0);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    will-change: transform;
+  }`
+  
+  .servicesCard:hover {
+    @apply bg-[rgba(23,216,255,0.35)] border-[rgba(23,216,255,0.35)]
+  }
+  
+  .servicesCard:hover {
+    transform: perspective(800px) rotateX(0deg) rotateY(0) translateZ(50px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .perspective-1000px {
+    perspective: 1000px;
+  } 
+  

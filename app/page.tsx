@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import {
   componentsCSSPerspective, 
@@ -12,14 +13,32 @@ import {
   componentsFunctionalities,
   FramerMotion
 } from "@/constants/HomeComponents";
+import { useState } from "react";
 
 import HomeCardLink from "@/components/home/HomeCardLink";
 import mainLogo from "@/public/mainLogo.png"
 
 export default function Home() {
+  const [activeTab, setActiveTab] = useState("3D Elements");
+  
+  const categories = [
+    { title: "3D Elements", components: components3D },
+    { title: "CSS Perspective", components: componentsCSSPerspective },
+    { title: "Layout & UI", components: componentsUI },
+    { title: "Backgrounds", components: componentsBackground },
+    { title: "Elements", components: componentsElements },
+    { title: "Functionalities", components: componentsFunctionalities },
+    { title: "Framer Motion", components: FramerMotion },
+    { title: "GSAP", components: componentsGsap },
+    { title: "GSAP custom", components: componentsGsap },
+    { title: "Olivier Larose", components: OliverComponents },
+    { title: "LunDev", components: LunComponents },
+    { title: "Image Sliders", components: Sliders },
+  ];
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-start pb-24">
-      <div className="z-10 w-full items-center justify-between font-bold text-normal">
+      <div className="hidden z-10 w-full items-center justify-between font-bold text-normal">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b 
         border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 
         dark:bg-zinc-800/30 dark:from-inherit">
@@ -46,80 +65,62 @@ export default function Home() {
         </div> */}
       </div>
 
-      <div className="relative h-[50vh] z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src={mainLogo}
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
 
-        <div className="grid text-center vp4:mb-0 vp4:w-full vp4:max-w-5xl vp4:grid-cols-3 vp4:text-left gap-4 px-5">
 
-          <h1 className="col-span-full text-2xl font-bold">3D Elements</h1>
-          {components3D.map((component) => (
-            <HomeCardLink key={component.title} cmp={component} />
-          ))}
+      <div className="w-full px-[3vw] flex flex-col items-center overflow-hidden">
+        <div className="flex flex-row justify-between items-center pt-[5vh] pb-[30px]">
+          {/* Tab Switcher */}
+          <div className="w-[50%] flex flex-wrap justify-start gap-4 mb-2 mt-8">
+            {categories.map((category) => (
+              <button
+                key={category.title}
+                onClick={() => setActiveTab(category.title)}
+                className={`px-4 py-2 font-medium transition-colors rounded-lg ${
+                  activeTab === category.title
+                    ? "text-white bg-blue-600"
+                    : "text-white/80 bg-white/20"
+                }`}
+              >
+                {category.title}
+              </button>
+            ))}
+          </div>
 
-          <h1 className="col-span-full text-2xl font-bold mt-20">CSS Perspective</h1>
-          {componentsCSSPerspective.map((component) => (
-            <HomeCardLink key={component.title} cmp={component} />
-          ))}
+          <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
+            <Image
+              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+              src={mainLogo}
+              alt="Next.js Logo"
+              width={180}
+              height={37}
+              priority
+            />
+          </div>
 
-          <h1 className="col-span-full text-2xl font-bold mt-20">Layout & UI</h1>
-          {componentsUI.map((component) => (
-            <HomeCardLink key={component.title} cmp={component} />
-          ))}
-
-          <h1 className="col-span-full text-2xl font-bold mt-20">Backgrounds</h1>
-          {componentsBackground.map((component) => (
-            <HomeCardLink key={component.title} cmp={component} />
-          ))}
-
-          <h1 className="col-span-full text-2xl font-bold mt-20">Elements</h1>
-          {componentsElements.map((component) => (
-            <HomeCardLink key={component.title} cmp={component} />
-          ))}
-
-          <h1 className="col-span-full text-2xl font-bold mt-20">Functionalities</h1>
-          {componentsFunctionalities.map((component) => (
-            <HomeCardLink key={component.title} cmp={component} />
-          ))}
-
-          <h1 className="col-span-full text-2xl font-bold mt-20">Framer Motion</h1>
-          {FramerMotion.map((component) => (
-            <HomeCardLink key={component.title} cmp={component} />
-          ))}
-
-          <h1 className="col-span-full text-2xl font-bold mt-20">GSAP</h1>
-          {componentsGsap.map((component) => (
-            <HomeCardLink key={component.title} cmp={component} />
-          ))}
-
-          <h1 className="col-span-full text-2xl font-bold mt-20">GSAP custom</h1>
-          {componentsGsap.map((component) => (
-            <HomeCardLink key={component.title} cmp={component} />
-          ))}
-
-          <h1 className="col-span-full text-2xl font-bold mt-20">Olivier Larose</h1>
-          {OliverComponents.map((component) => (
-            <HomeCardLink key={component.title} cmp={component} />
-          ))}
-
-          <h1 className="col-span-full text-2xl font-bold mt-20">LunDev</h1>
-          {LunComponents.map((component) => (
-            <HomeCardLink key={component.title} cmp={component} />
-          ))}
-
-          <h1 className="col-span-full text-2xl font-bold mt-20">Image Sliders</h1>
-          {Sliders.map((component) => (
-            <HomeCardLink key={component.title} cmp={component} />
-          ))}
-          
         </div>
+
+        
+        {/* Divider Line */}
+        <div className="w-full h-px bg-gray-300 dark:bg-gray-700 mb-8"></div>
+        
+        {/* Component Cards */}
+        <div className="flex-1 overflow-y-scroll max-h-[60vh] w-[90vw]">
+        <div className="grid text-center vp4:mb-0 vp4:w-full vp4:grid-cols-3 vp4:text-left gap-4">
+          {categories.map((category) => (
+            category.title === activeTab && (
+              <div key={category.title} className="col-span-full">
+                <h1 className="col-span-full text-2xl font-bold mb-6">{category.title}</h1>
+                <div className="grid vp4:grid-cols-3 gap-4">
+                  {category.components.map((component) => (
+                    <HomeCardLink key={component.title} cmp={component} />
+                  ))}
+                </div>
+              </div>
+            )
+          ))}
+        </div>
+        </div>
+      </div>
     </main>
   );
 }

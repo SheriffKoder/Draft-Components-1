@@ -5,17 +5,26 @@ export const componentsCSSPerspective = [
         link: "/LoadingLogo",
         title: "Loading Logos",
         description: "A component that flips between two logos that can be displayed as a loading UI",
+        image: "/cardImages/perspective/LoadingLogo.jpg"
     },
 
     {
         link: "/expandingCards",
         title: "Expanding Cards",
         description: "Expanding cards 3D animation (CSS)",
+        image: "/cardImages/perspective/expandingCards.jpg"
     },
     {
         link: "/rotatingCube",
         title: "Rotating Cube",
         description: "Rotating cube 3D animation (CSS)",
+        image: "/cardImages/perspective/rotatingCube.jpg"
+    },  
+    {
+        link: "/card-connect",
+        title: "Card Connect",
+        description: "Card connect with perspective effect",
+        image: "/cardImages/perspective/card-connect.jpg"
     },
 ]
 
@@ -66,6 +75,24 @@ export const componentsUI = [
         description: "Modal tips with fade in/out animation",
         image: "/cardImages/UI/ModalTips.jpg"
     },
+    {
+        link: "/TabSwitcher",
+        title: "Tab Switcher",
+        description: "Tab switcher with animation and timer",
+        image: "/cardImages/UI/TabSwitcher.jpg"
+    },
+    {
+        link: "/mobile-nav-2",
+        title: "Mobile Nav Bar",
+        description: "Mobile nav bar with smooth fade in/out animation on scroll and circular menu area open",
+        image: "/cardImages/UI/mobile-nav-2.jpg"
+    },
+    {
+        link: "/side-nav",
+        title: "Side Nav",
+        description: "Side nav with smooth width transition animation on select",
+        image: "/cardImages/UI/side-nav.jpg"
+    }
 ]
 
 
@@ -118,6 +145,25 @@ export const components3D = [
         link: "/smoke",
         title: "Smoke background",
         description: "Smoke animations made with webGL",
+        image: "/cardImages/3D/smoke.jpg"
+    },
+    {
+        link: "/particles",
+        title: "Particles",
+        description: "Particles animations made with webGL",
+        image: "/cardImages/3D/particles.jpg"
+    },  
+    {
+        link: "/vaporwave",
+        title: "Vaporwave",
+        description: "Vaporwave animations made with webGL",
+        image: "/cardImages/3D/vaporwave.jpg"
+    },
+    {
+        link: "/model-render",
+        title: "Model Render",
+        description: "Model render with Three.js basic",
+        image: "/cardImages/3D/model-render.jpg"
     },
 ]
 
@@ -237,6 +283,66 @@ export const componentsElements = [
         description: "Alternate fade up text animation",
         image: "/cardImages/elements/FadeUpText.jpg"
     },
+    {
+        link: "/tooltip3",
+        title: "Tooltip 3",
+        description: "Hover to display an animated fade tooltip",
+        image: "/cardImages/elements/tooltip3.jpg"
+    },
+    {
+        link: "/GradientButton",
+        title: "Gradient Button",
+        description: "Gradient button with background color animation",
+        image: "/cardImages/elements/GradientButton.jpg"
+    },
+    {
+        link: "/ShineButton",
+        title: "Shine Button",
+        description: "Shine button with background color animation",
+        image: "/cardImages/elements/ShineButton.jpg"
+    },
+    {
+        link: "/grad-border-cards",
+        title: "Grad Border Cards",
+        description: "Cards with rounded corners and animated gradient border configurable",
+        image: "/cardImages/elements/grad-border-cards.jpg"
+    },
+    {
+        link: "/gradient-border-card-static",
+        title: "Grad Border Card Static",
+        description: "Card with gradient border and static background",
+        image: "/cardImages/elements/grad-border-card-static.jpg"
+    },
+    {
+        link: "/mis-card",
+        title: "MIS Card",
+        description: "Card with background gradient shadow",
+        image: "/cardImages/elements/mis-card.jpg"
+    },
+    {
+        link: "/grain-card",
+        title: "Grain Card",
+        description: "Card with grainy background",
+        image: "/cardImages/elements/grain-card.jpg"
+    },
+    {
+        link: "/signature-anim",
+        title: "Signature Anim",
+        description: "Signature animation",
+        image: "/cardImages/elements/signature-anim.jpg"
+    },
+    {
+        link: "/stars-anim",
+        title: "Stars Anim",
+        description: "Stars animation",
+        image: "/cardImages/elements/stars-anim.jpg"
+    },
+    {
+        link: "/tab-gallery",
+        title: "Tab Gallery",
+        description: "Use tabs to display different sections of the same component with moving bg indicator",
+        image: "/cardImages/elements/tab-gallery.jpg"
+    }
 
 ]
 
@@ -265,6 +371,17 @@ export const componentsFunctionalities= [
         description: "Have data? Search input, clear (simple)",
         image: "/cardImages/elements/input-search.jpg"
     },
+    {
+        link: "/table-filter/render/scrollwidth",
+        title: "Table Filter",
+        description: "Table filter with date, number, hour, and status filter and sorting",
+        image: "/cardImages/elements/table-filter1.jpg"
+    }, {
+        link: "/table-filter/render/resizable",
+        title: "Table Filter (resizable)",
+        description: "Table filter with date, number, hour, and status filter and sorting",
+        image: "/cardImages/elements/table-filter2.jpg"
+    }
 
 ]
 
