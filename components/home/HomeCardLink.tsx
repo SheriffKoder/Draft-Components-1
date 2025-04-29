@@ -7,7 +7,7 @@ const HomeCardLink = ({cmp} : {
 }) => {
   return (
     <Link
-    href={cmp.link}
+    href={cmp.link} target="_blank"
     className="group rounded-lg border border-gray-300 dark:border-neutral-800 px-3 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
     // target="_blank"
     // rel="noopener noreferrer"

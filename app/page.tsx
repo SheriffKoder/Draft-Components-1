@@ -11,15 +11,16 @@ import {
   LunComponents,
   Sliders,
   componentsFunctionalities,
-  FramerMotion
+  FramerMotion,
+  chartComponents
 } from "@/constants/HomeComponents";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 import HomeCardLink from "@/components/home/HomeCardLink";
 import mainLogo from "@/public/mainLogo.png"
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState("3D Elements");
+  const [activeTab, setActiveTab] = useState("Display");
   
   const categories = [
     { title: "3D Elements", components: components3D },
@@ -34,10 +35,23 @@ export default function Home() {
     { title: "Olivier Larose", components: OliverComponents },
     { title: "LunDev", components: LunComponents },
     { title: "Image Sliders", components: Sliders },
+    { title: "Chart Components", components: chartComponents }, 
   ];
+
+  // Generate 6 random components from all categories
+  const randomComponents = useMemo(() => {
+    // Flatten all components into a single array
+    const allComponents = categories.flatMap(category => category.components);
+    
+    // Shuffle the array and take the first 6 items
+    return [...allComponents]
+      .sort(() => 0.5 - Math.random())
+      .slice(0, 6);
+  }, [categories]);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-start pb-24">
+      
       <div className="hidden z-10 w-full items-center justify-between font-bold text-normal">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b 
         border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 
@@ -71,6 +85,16 @@ export default function Home() {
         <div className="flex flex-row justify-between items-center pt-[5vh] pb-[30px]">
           {/* Tab Switcher */}
           <div className="w-[50%] flex flex-wrap justify-start gap-4 mb-2 mt-8">
+            <button
+              onClick={() => setActiveTab("Display")}
+              className={`px-4 py-2 font-medium transition-colors rounded-lg ${
+                activeTab === "Display"
+                  ? "text-white bg-blue-600"
+                  : "text-white/80 bg-white/20"
+              }`}
+            >
+              Display
+            </button>
             {categories.map((category) => (
               <button
                 key={category.title}
@@ -104,21 +128,32 @@ export default function Home() {
         <div className="w-full h-px bg-gray-300 dark:bg-gray-700 mb-8"></div>
         
         {/* Component Cards */}
-        <div className="flex-1 overflow-y-scroll max-h-[60vh] w-[90vw]">
-        <div className="grid text-center vp4:mb-0 vp4:w-full vp4:grid-cols-3 vp4:text-left gap-4">
-          {categories.map((category) => (
-            category.title === activeTab && (
-              <div key={category.title} className="col-span-full">
-                <h1 className="col-span-full text-2xl font-bold mb-6">{category.title}</h1>
+        <div className="flex-1 w-[90vw] overflow-y-auto" style={{ maxHeight: 'calc(100vh - 250px)' }}>
+          <div className="grid text-center vp4:mb-0 vp4:w-full vp4:grid-cols-3 vp4:text-left gap-4">
+            {activeTab === "Display" ? (
+              <div className="col-span-full">
+                <h1 className="col-span-full text-2xl font-bold mb-6">Featured Components</h1>
                 <div className="grid vp4:grid-cols-3 gap-4">
-                  {category.components.map((component) => (
+                  {randomComponents.map((component) => (
                     <HomeCardLink key={component.title} cmp={component} />
                   ))}
                 </div>
               </div>
-            )
-          ))}
-        </div>
+            ) : (
+              categories.map((category) => (
+                category.title === activeTab && (
+                  <div key={category.title} className="col-span-full">
+                    <h1 className="col-span-full text-2xl font-bold mb-6">{category.title}</h1>
+                    <div className="grid vp4:grid-cols-3 gap-4">
+                      {category.components.map((component) => (
+                        <HomeCardLink key={component.title} cmp={component} />
+                      ))}
+                    </div>
+                  </div>
+                )
+              ))
+            )}
+          </div>
         </div>
       </div>
     </main>

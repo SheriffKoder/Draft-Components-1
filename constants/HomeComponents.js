@@ -92,6 +92,12 @@ export const componentsUI = [
         title: "Side Nav",
         description: "Side nav with smooth width transition animation on select",
         image: "/cardImages/UI/side-nav.jpg"
+    },
+    {
+        link: "/mouse-tracker",
+        title: "Mouse Tracker",
+        description: "Mouse tracker with radial gradient effect",
+        image: "/cardImages/UI/mouse-tracker.jpg"
     }
 ]
 
@@ -564,3 +570,17 @@ export const Sliders = [
     },
 ]
 
+export const chartComponents = [
+    {
+        link: "/donut-charts",
+        title: "Donut Charts",
+        description: "Donut Charts",
+        image: "/cardImages/charts/donut-charts.jpg"
+    },
+    {
+        link: "/line-charts",
+        title: "Line Charts",
+        description: "Line Charts",
+        image: "/cardImages/charts/line-charts.jpg"
+    },
+]
