@@ -620,3 +620,57 @@ export const LineChart = ({
     </div>
   );
 }; 
+
+
+/*
+height={200}
+        // Default values for styling props with white as default
+        showNeonShadow = {false}
+        showGrid = {true}
+        showXAxisLine = {false}
+        showYAxisLine = {false}
+        showLabel = {false}
+        lineColor = '#ffffff'
+        shadowColor = '#ffffff'
+        labelColor = 'rgba(255, 255, 255, 0.7)'
+        tickColor = 'rgba(255, 255, 255, 0.7)'
+        chartTitle = 'Sales'
+        chartSubtitle = '4 months'
+        showTooltip = {true}
+        lineTension = {0.4}
+        lineWidth = {2}
+        showTicks = {true}
+        showPoints = {false}
+        pointRadius = {3}
+        pointColor = '#ffffff'
+        pointBorderColor = '#ffffff'
+        pointBorderWidth = {1}
+        showTitle = {true}
+        showSubtitle = {true}
+        titleColor = '#ffffff'
+        subtitleColor = 'rgba(255, 255, 255, 0.7)'
+        // Default values for new fill and gradient props
+        fill = {true}
+        fillOpacity = {0.5}
+        gradientToTransparent = {true}
+        // Default value for new gradient control prop
+        gradientStopPercentage = {1.0}
+        // Default values for new grid control props
+        showXGrid = {false}
+        showYGrid = {false}
+        gridColor = 'rgba(255, 255, 255, 0.1)'
+        // Default values for new font size props
+        tickFontSize = {10}
+        titleFontSize = {16}
+        subtitleFontSize = {14}
+        fillColor = '#ffffff'
+        // Default values for new tooltip props
+        tooltipBackgroundColor = 'rgba(0, 0, 0, 0.7)'
+        tooltipPadding = {10}
+        tooltipTitleColor = '#ffffff'
+        tooltipBodyFont = {12}
+        tooltipTitleFont = {12}
+        tooltipUseLineColors = {true}
+        shadowOpacity = {0.5}
+
+      */

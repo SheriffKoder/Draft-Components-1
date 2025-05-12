@@ -583,4 +583,10 @@ export const chartComponents = [
         description: "Line Charts",
         image: "/cardImages/charts/line-charts.jpg"
     },
+    {
+        link: "/bar-charts",
+        title: "Bar Charts",
+        description: "Bar Charts",
+        image: "/cardImages/charts/bar-charts.jpg"
+    }
 ]
