@@ -387,6 +387,12 @@ export const componentsFunctionalities= [
         title: "Table Filter (resizable)",
         description: "Table filter with date, number, hour, and status filter and sorting",
         image: "/cardImages/elements/table-filter2.jpg"
+    },
+    {
+        link: "/iframe",
+        title: "Iframe",
+        description: "Iframe",
+        image: "/cardImages/elements/iframes.png"
     }
 
 ]
@@ -588,5 +594,11 @@ export const chartComponents = [
         title: "Bar Charts",
         description: "Bar Charts",
         image: "/cardImages/charts/bar-charts.jpg"
+    },
+    {
+        link: "/greed-index",
+        title: "Greed Index",
+        description: "Greed Index/ speedometer chart",
+        image: "/cardImages/charts/greed-index.jpg"
     }
 ]
