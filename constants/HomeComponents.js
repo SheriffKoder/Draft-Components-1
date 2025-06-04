@@ -94,11 +94,11 @@ export const componentsUI = [
         image: "/cardImages/UI/side-nav.jpg"
     },
     {
-        link: "/mouse-tracker",
+        link: "Template1/mouse-tracker",
         title: "Mouse Tracker",
         description: "Mouse tracker with radial gradient effect",
         image: "/cardImages/UI/mouse-tracker.jpg"
-    }
+    },
 ]
 
 
@@ -348,7 +348,27 @@ export const componentsElements = [
         title: "Tab Gallery",
         description: "Use tabs to display different sections of the same component with moving bg indicator",
         image: "/cardImages/elements/tab-gallery.jpg"
-    }
+    },
+    {
+        link: "Template1/RandomText",
+        title: "Random Text",
+        description: "Random text generator animation",
+    },
+    {
+        link: "Template1/reveal-text-button",
+        title: "Text horizontal reveal",
+        description: "Text horizontal reveal for buttons",
+    },
+    {
+        link: "Template1/SkewBG",
+        title: "Skew background",
+        description: "Absolute skewed background to contain any element as a background",
+    },
+    {
+        link: "Template1/AdjustableBlotterDistortion",
+        title: "Blotter Distortion",
+        description: "Blotter Distortion",
+    },
 
 ]
 
@@ -433,12 +453,6 @@ export const componentsGsap = [
         description: "builds on horizontal layering with animated item inside",
     },
     {
-        link: "/expandingCards2",
-        title: "Expanding Cards",
-        description: "Expanding cards with GSAP animation",
-    },
-    // 
-    {
         link: "/NavigationLinksProgress",
         title: "*Section Progress /Smooth Nav links",
         description: "Show to users the progress of scrolling the page, Click on nav links to smoothly head to sections using gsap.utils.toArray",
@@ -448,11 +462,7 @@ export const componentsGsap = [
         title: "Parallax Boxes",
         description: "Boxes display from the bottom on scroll, each with different speed",
     },
-    {
-        link: "/ScrollFillText",
-        title: "Reading effect",
-        description: "Text has color fill that animates with scroll, each line is independent",
-    },
+
     {
         link: "/InfiniteGallery",
         title: "Infinite gallery",
@@ -481,7 +491,90 @@ export const componentsGsap2 = [
         title: "Parallax Cards x/y axis",
         description: "scroll up-down get parallax effect",
         image: "/cardImages/gsap/ParallaxCardsXY.png"
+    },
+    {
+        link: "/expandingCards2",
+        title: "Expanding Cards",
+        description: "Expanding cards with GSAP animation",
+    },
+    
+    {
+        link: "/ScrollFillText",
+        title: "Reading effect",
+        description: "Text has color fill that animates with scroll, each line is independent",
+    },
+    {
+        link: "Template1/LayeringZoom",
+        title: "Section Layering Zoom-in",
+        description: "Layering Zoom-in",
+    },
+    {
+        link: "Template1/SmoothReveal",
+        title: "Smooth Reveal",
+        description: "Vertical curtain reveal effect",
+    },
+    {
+        link: "Template1/SmoothRevealLoader",
+        title: "Smooth Reveal Loader",
+        description: "Smooth Reveal (for logos)",
+    },
+    {
+        link: "Template1/SmoothScrollButton",
+        title: "Smooth scroll button",
+        description: "Smooth scroll to a section with button",
+    },
+    {
+        link: "/pinning-1",
+        title: "Pinning 1",
+        description: "Text rotate on scroll till 360deg",
+    },
+    {
+        link: "/pinning-2",
+        title: "Pinning 2",
+        description: "Box reveal on scroll - separate animations",
+    },
+    {
+        link: "/pinning-3",
+        title: "Pinning 3",
+        description: "Box reveal on scroll - some animations combined into one scroll",
+    },
+    {
+        link: "/pinning-4",
+        title: "Pinning 4",
+        description: "Horizontal cards, good for galleries",
+    },
+    {
+        link: "/pinning-5",
+        title: "Pinning 5",
+        description: "Vertical cards",
+    },
+    {
+        link: "/pinning-6",
+        title: "Pinning 6",
+        description: "Stack cards",
+    },
+]
 
+export const GSAPText = [
+    {
+        link: "Template1/gsap-animate-mount",
+        title: "Animate on mount",
+        description: "Animate on mount",
+    },
+    {
+        link: "Template1/gsap-para-hero-buttons",
+        title: "Paragraph animation",
+        description: "Alternating paragraph animation based on state/selected, slow fade in/out",
+    },
+    {
+        link: "Template1/SectionTextGsap",
+        title: "Section entry animation",
+        description: "Section entry animation",
+    },
+    {
+        link: "Template1/SelectionTextAnimation",
+        title: "Paragraph animation based on item hover",
+        description: "based on item hover no outro, fast fade in",
     },
 ]
 
@@ -573,6 +666,17 @@ export const Sliders = [
         title: "Testimonials Cards",
         description: "horizontal slider",
         image: "/cardImages/sliders/TestimonialsCards.jpg"
+    },
+    {
+        link: "Template1/ScrollableBoxes",
+        title: "Testimonials (enhanced)",
+        description: "Draggable divs with progress and buttons",
+        image: "/cardImages/sliders/TestimonialsCards.jpg"
+    },
+    {
+        link: "Template1/BrandsSliderVertical",
+        title: "Brands Slider Vertical",
+        description: "Brands Slider Vertical",
     },
 ]
 

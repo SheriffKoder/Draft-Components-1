@@ -12,7 +12,9 @@ import {
   Sliders,
   componentsFunctionalities,
   FramerMotion,
-  chartComponents
+  chartComponents,
+  componentsGsap2,
+  GSAPText
 } from "@/constants/HomeComponents";
 import { useState, useMemo } from "react";
 
@@ -31,7 +33,8 @@ export default function Home() {
     { title: "Functionalities", components: componentsFunctionalities },
     { title: "Framer Motion", components: FramerMotion },
     { title: "GSAP", components: componentsGsap },
-    { title: "GSAP custom", components: componentsGsap },
+    { title: "GSAP custom", components: componentsGsap2 },
+    { title: "GSAP text", components: GSAPText },
     { title: "Olivier Larose", components: OliverComponents },
     { title: "LunDev", components: LunComponents },
     { title: "Image Sliders", components: Sliders },

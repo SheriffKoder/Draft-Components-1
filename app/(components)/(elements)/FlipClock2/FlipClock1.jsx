@@ -10,7 +10,8 @@ const FlipClock1 = () => {
   return (
     <div>
          <FlipClockCountdown 
-        to={new Date().getTime() + 48 * 3600 * 1000 + 5000}
+         // 05/14/2025
+        to={new Date('2025-05-14 00:00:00').getTime()}
         labels={['DAYS', 'HOURS', 'MINUTES', 'SECONDS']}
         labelStyle={{ fontSize: 10, fontWeight: 500, textTransform: 'uppercase', color: "black" }}
         digitBlockStyle={{ width: 40, height: 60, fontSize: 30 }}

@@ -6,15 +6,15 @@ import "./LunImage.scss"
 
 const Page = () => {
 
-  function changeImageForward () {
-    let slider = document.querySelector(".LunSlider");
+  function resetForward () {
+    let slider = document.querySelector(".container");
     if (slider) {
-      let img = slider.querySelector("img:first-child");
-      if (img) slider.append(img);
+      let boxesArea1 = slider.querySelector("boxesArea1");
+      if (boxesArea1) slider.append(boxesArea2);
     }
   }
     
-  function changeImageBackward () {
+  function resetBackward () {
     let slider = document.querySelector(".LunSlider");
     if (slider) {
       let img = slider.querySelector("img:last-child");

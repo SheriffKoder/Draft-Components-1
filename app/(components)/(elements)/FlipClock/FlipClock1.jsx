@@ -15,8 +15,10 @@ const FlipClock1 = () => {
         // create visual counter
         Tick.DOM.create(document.querySelector('.tick'), {
         didInit: function (tick) {
+            // get current year 
+            const currentYear = new Date().getFullYear();
             // create the countdown counter
-            var counter = Tick.count.down('2025');
+            var counter = Tick.count.down(`${currentYear}-05-14 03:00:00`);
 
             counter.onupdate = function (value) {
             // console.log('onupdate', value);
